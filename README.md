@@ -1,5 +1,7 @@
 # B2ctouresbalon
 
+This Front application was developed by Ferney Cáceres.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
 ## Development server
