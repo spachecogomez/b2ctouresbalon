@@ -11,4 +11,5 @@ export class DataService {
       (res) => res.json()
     );
   }
+
 }
