@@ -9,7 +9,7 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
   title = 'app works!';
-  ninjas = [];
+  plans = [];
 
   constructor (private dataService : DataService){}
 
@@ -18,8 +18,7 @@ export class AppComponent {
       (data) => this.ninjas = data);*/
 
       this.dataService.getTuristic_plans().subscribe(
-        (data) => console.log(data)
-      )
+        (data) => this.plans = data);
   }
 
 }

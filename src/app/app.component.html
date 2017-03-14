@@ -1,5 +1,4 @@
   <div class="container">
-
     <!-- Static navbar -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -32,9 +31,24 @@
       </div><!--/.container-fluid -->
     </nav>
 </div>
+<div class="carrusel">
+  <carousel>
+    <slide>
+      <img src="http://lorempixel.com/1200/400/sports/1/" class="img-responsive" alt="First slide">
+    </slide>
+    <slide>
+      <img src="http://lorempixel.com/1200/400/sports/" class="img-responsive" alt="Second slide">
+    </slide>
+    <slide>
+      <img src="http://lorempixel.com/1200/400/sports/2/" class="img-responsive" alt="Third slide">
+    </slide>
+  </carousel>
+</div>
 <hr>
-<div *ngFor="let ninja of ninjas">
- {{ninja.name}} - {{ninja.belt}}
+<div class="body" style="margin-left:5%"> 
+  <div *ngFor="let plan of plans">
+    <img src={{plan.event_image1}} class="img-responsive img-thumbnail" alt="none">
+  </div>
 </div>
 
     

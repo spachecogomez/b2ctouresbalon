@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AlertModule } from 'ng2-bootstrap';
 import { DropdownModule } from 'ng2-bootstrap/dropdown';
+import { CarouselModule } from 'ng2-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
-    DropdownModule.forRoot()
+    DropdownModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
