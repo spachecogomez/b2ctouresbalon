@@ -14,8 +14,12 @@ export class AppComponent {
   constructor (private dataService : DataService){}
 
   ngOnInit(){
-    this.dataService.fetchData().subscribe(
-      (data) => this.ninjas = data);
+    /*this.dataService.fetchData().subscribe(
+      (data) => this.ninjas = data);*/
+
+      this.dataService.getTuristic_plans().subscribe(
+        (data) => console.log(data)
+      )
   }
 
 }
