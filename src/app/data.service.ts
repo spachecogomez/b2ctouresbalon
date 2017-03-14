@@ -28,8 +28,6 @@ export class DataService {
     }).map(res => res.json());
   }
 
-<<<<<<< HEAD
-=======
   
 getCompany(companyId:string) {
     var headers = new Headers();
@@ -40,6 +38,4 @@ getCompany(companyId:string) {
     }).map(res => res.json());
   }  
 
-
->>>>>>> d7128355ea9f7c0beed5be035fb3e598188ef8d5
 }
