@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 export const router : Routes =[
     { path:'', component: HomeComponent },  
-    { path:'details', component: DetailsComponent }      
+    { path:'details/:id', component: DetailsComponent }      
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(router);
