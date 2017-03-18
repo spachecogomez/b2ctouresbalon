@@ -1,0 +1,21 @@
+<div class="carrusel">
+  <carousel>
+    <slide>
+      <img src="http://lorempixel.com/1200/400/sports/1/" class="img-responsive" alt="First slide">
+    </slide>
+    <slide>
+      <img src="http://lorempixel.com/1200/400/sports/" class="img-responsive" alt="Second slide">
+    </slide>
+    <slide>
+      <img src="http://lorempixel.com/1200/400/sports/2/" class="img-responsive" alt="Third slide">
+    </slide>
+  </carousel>
+</div>
+<hr>
+<div class="body"> 
+  <div *ngFor="let plan of plans">
+    <a [routerLink]="['/details']">
+      <img src={{plan.event_image1}} class="img-responsive img-thumbnail" alt="none">
+    </a>
+  </div>
+</div>

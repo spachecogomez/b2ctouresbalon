@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+
+import { routes } from './app.router';
+
 import 'rxjs/add/observable/of';
 
 
@@ -31,11 +34,7 @@ export class AppComponent {
   constructor (private dataService : DataService){}
 
   ngOnInit(){
-    /*this.dataService.fetchData().subscribe(
-      (data) => this.ninjas = data);*/
-
-      this.dataService.getTuristic_plans().subscribe(
-        (data) => this.plans = data);
+  
   }
 
 }

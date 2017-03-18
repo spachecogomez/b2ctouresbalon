@@ -1,18 +1,19 @@
-.img-thumbnail{
-    height: 150px;
-    width: 250px;
-}
 .carrusel {
-    margin-left:5%;
-    margin-right:5%
+    margin-left:8%;
+    margin-right:8%
 }
 .search{
-/*float:right;
-    margin-top:1.5%;
-    width: 20%;*/
     float:right;
     margin-top:1%;
 }
 .navbar-nav{
     width: 90%
+}
+.body{
+    margin-left:8%;
+    margin-right:8%;
+}
+.footer{
+    margin-left:8%;
+    margin-right:8%;
 }

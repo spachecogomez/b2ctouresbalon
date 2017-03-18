@@ -29,13 +29,13 @@ export class DataService {
   }
 
   
-getCompany(companyId:string) {
+/*getCompany(companyId:string) {
     var headers = new Headers();
     this.createAuthorizationHeader(headers);
 
     return this.http.get(`https://angular2.apispark.net/v1/companies/${companyId}`, {
       headers: headers
     }).map(res => res.json());
-  }  
+  }  */
 
 }
