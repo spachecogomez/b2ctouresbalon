@@ -12,10 +12,47 @@
   </carousel>
 </div>
 <hr>
-<div class="body"> 
+<!--<div class="body"> 
   <div *ngFor="let plan of plans">
     <a [routerLink]="['/details', plan.id]">
       <img src={{plan.event_image1}} class="img-responsive img-thumbnail" alt="none">
     </a>
+  </div>
+</div>-->
+
+<div class="body">
+  <div class="row">
+    	<div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let plan of plans">
+         <div class="col-item">
+                <div class="photo">
+                    <img src="{{plan.image_detail}}" class="img-responsive" alt="a" />
+                </div>
+                <div class="info">
+                    <div class="row">
+                        <div class="price col-md-10">
+                            <h5>{{plan.product_detail.spectacle_name}}</h5>
+                            <h5 class="price-text-color">${{plan.total_price}}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rating hidden-sm col-md-8">
+                            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                            </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                            </i><i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="separator clear-left">
+                        <p class="btn-add">
+                            <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Agregar al Carrito</a></p>
+                        <p class="btn-details">
+                            <i class="fa fa-list"></i>
+                              <a [routerLink]="['/details', plan.id_campaign]" class="hidden-sm">Mas detalles</a>
+                        </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+    	</div>
   </div>
 </div>
