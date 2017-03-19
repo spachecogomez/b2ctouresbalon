@@ -1,9 +1,97 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "campaigns": 
+  [
+    { 
+     "id_campaign": "1",
+     "image_detail": "",
+     "product_detail": 
+      {
+        "id_product":"1",
+        "spectacle_name":"El Clasico de España R.Madrid vs FCBarcelona",
+        "spectacle_date":"23/04/2017",
+        "spectacle_city": "Madrid (España)",
+        "arrival_date": "20/04/2017",
+        "return_date" : "25/04/2017",
+        "transport_detail":
+          {
+            "transport_id":"1",
+            "transport_type" : "Transporte Aereo",
+            "transport_price" : "3000"
+          },
+        "spectacle_detail":
+          {
+            "spectacle_id": "1",
+            "spectacle_type":"(Futból)",
+            "spectacle_price": "1200"
+          },
+        "accommodation_detail":
+          {
+            "accommodation_id": "1",
+            "accommodation_type": "Hotel",
+            "accommodation_price" : "1000"
+          }
+      },
+      "total_price":"5200",
+      "other_campaigns":
+      [
+        {"id_campaign":"2","spectacle_name":"FA Cup Final : Manchester United vs Chelsea","image_detail":""},
+        {"id_campaign":"3","spectacle_name":"Community Shield Final : Manchester City vs Everton","image_detail":""},
+        {"id_campaign":"4","spectacle_name":"Final Copa Colombia : Atletico Bucaramanga vs DIM","image_detail":""},
+        {"id_campaign":"6","spectacle_name":"Final ATP 500 Buenos Aires","image_detail":""},
+        {"id_campaign":"7","spectacle_name":"Final USA Open","image_detail":""}
+      ]
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "orders": 
+  [
+    { 
+      "order_id": "1",
+      "order_date": "19/03/2017",
+      "order_price": "5000",
+      "order_status":
+      {
+        "status_id":"1",
+        "status_name":"En Validación"
+      },
+      "order_comments":"Orden de Prueba",
+      "customer_details":
+      {
+          "cust_id": "1",
+          "cust_firstname":"John",
+          "cust_lastname" :"Doe",
+          "cust_phone": "(57)555-5555-55",
+          "cust_address": "Unknown Street Av 12"
+      },
+      "order_details":
+      [
+        {
+          "item_id" : "1",
+          "product_id ":"1",
+          "spectacle_name":"El Clasico de España R.Madrid vs FCBarcelona",
+          "total_price":"5200",
+          "quantity" : "1"
+        },
+        {
+          "item_id" : "2",
+          "product_id ":"2",
+          "spectacle_name":"FA Cup Final : Manchester United vs Chelsea",
+          "total_price":"4000",
+          "quantity" : "1"
+        }
+      ] 
+    }
   ],
-  "profile": { "name": "typicode" }
+  "customer": 
+  { 
+      "cust_id": "1",
+      "cust_firstname":"John",
+      "cust_lastname" :"Doe",
+      "cust_phone": "(57)555-5555-55",
+      "cust_address": "Unknown Street Av 12",
+      "cust_email" : "john_doe@javeriana.edu.co",
+      "cust_password":"89230iuweiq24120o",
+      "cust_credit_card_type":"Visa",
+      "cust_credit_card_number":"8r5ty65",
+      "cust_status":"1" 
+  }
 }
