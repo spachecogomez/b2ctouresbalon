@@ -37,13 +37,6 @@
          <b> Fecha de regreso:</b>
           {{s.value.return_date}}
         </div>
-        <br>
-        <div *ngFor='let t of (s.value | ObjNgFor)'>
-          <div *ngIf="t.value.spectacle_name">
-             <b> Evento Top : </b>
-             {{t.value.spectacle_name}}
-          </div>
-        </div>
       </div>
       <br>
   </div>
@@ -52,7 +45,6 @@
         <a class="btn btn-success">
           <i class="fa fa-shopping-cart"></i> Agregar al Carrito</a>
       </div>
-  
       <p>
           <span class="glyphicon glyphicon-star"></span>
           <span class="glyphicon glyphicon-star"></span>
@@ -63,4 +55,49 @@
       </p>
   </div>
   </div>
-  
+
+  <!--<div *ngFor='let s of (campaign | ObjNgFor)'>
+  <div *ngFor='let t of (s.value | ObjNgFor)'>
+    {{t.value.spectacle_name}}
+  </div>
+</div>-->
+<div *ngFor='let s of (campaign | ObjNgFor)'>
+  <div *ngFor='let t of (s.value | ObjNgFor)'>
+    <div *ngIf="t.value.spectacle_name">
+      <div class="body">
+        <div class="row"  >
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="col-item">
+                      <div class="photo">
+                          <img src="{{t.value.image_detail}}" class="img-responsive" alt="a" />
+                      </div>
+                      <div class="info">
+                          <div class="row">
+                              <div class="price col-md-10">
+                                  <h5>{{t.value.spectacle_name}}</h5>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="rating hidden-sm col-md-8">
+                                  <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                  </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                  </i><i class="fa fa-star"></i>
+                              </div>
+                          </div>
+                          <div class="separator clear-left">
+                              <p class="btn-add">
+                                  <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Agregar al Carrito</a></p>
+                              <p class="btn-details">
+                                  <i class="fa fa-list"></i>
+                                    <a [routerLink]="['/details', t.value.id_campaign]" class="hidden-sm">Mas detalles</a>
+                              </p>
+                          </div>
+                          <div class="clearfix">
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>

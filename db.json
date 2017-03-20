@@ -34,11 +34,11 @@
       "total_price":"5200",
       "other_campaigns":
       [
-        {"id_campaign":"2","spectacle_name":"FA Cup Final : Manchester United vs Chelsea","image_detail":""},
-        {"id_campaign":"3","spectacle_name":"Community Shield Final : Manchester City vs Everton","image_detail":""},
-        {"id_campaign":"4","spectacle_name":"Final Copa Colombia : Atletico Bucaramanga vs DIM","image_detail":""},
-        {"id_campaign":"6","spectacle_name":"Final ATP 500 Buenos Aires","image_detail":""},
-        {"id_campaign":"7","spectacle_name":"Final USA Open","image_detail":""}
+        {"id_campaign":"2","spectacle_name":"FA Cup Final : Manchester United vs Chelsea","image_detail":"http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg"},
+        {"id_campaign":"3","spectacle_name":"Community Shield Final : Manchester City vs Everton","image_detail":"http://worldsoccertalk.com/wp-content/uploads/2016/08/community-shield-600x393.jpg"},
+        {"id_campaign":"4","spectacle_name":"Final Copa Colombia : Atletico Bucaramanga vs DIM","image_detail":"http://www.eltiempo.com/files/article_main/uploads/2017/02/11/589f80b78cab5.jpeg"},
+        {"id_campaign":"6","spectacle_name":"Final ATP 500 Buenos Aires","image_detail":"https://img.difoosion.com/wp-content/blogs.dir/29/files/2016/06/Raqueta-con-pelota-de-tenis.jpg"},
+        {"id_campaign":"7","spectacle_name":"Final USA Open","image_detail":"http://e1.365dm.com/16/08/16-9/20/andy-murray-us-open-tennis_3773314.jpg"}
       ]
     }
   ],
