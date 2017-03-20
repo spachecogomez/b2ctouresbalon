@@ -1,3 +1,66 @@
-<p>
-  details works! {{id}}
-</p>
+<!--first level-->
+<!--<p>{{campaign.id}}</p>-->
+<!--secound level-->
+<!--<div *ngFor='let s of (campaign | ObjNgFor)'>
+  {{s.value.spectacle_name}}-->
+  <!--third level-->
+  <!--<div *ngFor='let t of (s.value | ObjNgFor)'>
+    {{t.value.spectacle_name}}
+  </div>
+</div>-->
+
+<div class="thumbnail">
+  <img class="img-responsive" src="{{campaign.image_detail}}" alt="">
+  <div class="caption-full">
+      <h4 class="pull-right"><b> ${{campaign.total_price}}</b></h4>
+      <div *ngFor='let s of (campaign | ObjNgFor)'>
+        <h4 *ngIf="s.value.spectacle_name">
+         {{s.value.spectacle_name}}
+        </h4>
+        <div *ngIf="s.value.spectacle_date">
+         <b> Fecha del Espectaculo:</b>
+          {{s.value.spectacle_date}}
+        </div>
+        <div *ngIf="s.value.spectacle_date">
+          <b>Ciudad del evento:</b>
+          {{s.value.spectacle_city}}
+        </div>
+        <div *ngIf="s.value.arrival_date">
+         <b> Fecha de llegada:</b>
+          {{s.value.arrival_date}}
+        </div>
+        <div *ngIf="s.value.return_date">
+         <b> Fecha de regreso:</b>
+          {{s.value.return_date}}
+        </div>
+        <div *ngIf="s.value.return_date">
+         <b> Fecha de regreso:</b>
+          {{s.value.return_date}}
+        </div>
+        <br>
+        <div *ngFor='let t of (s.value | ObjNgFor)'>
+          <div *ngIf="t.value.spectacle_name">
+             <b> Evento Top : </b>
+             {{t.value.spectacle_name}}
+          </div>
+        </div>
+      </div>
+      <br>
+  </div>
+  <div class="ratings">
+      <div class="pull-right">
+        <a class="btn btn-success">
+          <i class="fa fa-shopping-cart"></i> Agregar al Carrito</a>
+      </div>
+  
+      <p>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star-empty"></span>
+          4.0 stars
+      </p>
+  </div>
+  </div>
+  

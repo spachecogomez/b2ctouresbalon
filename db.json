@@ -2,9 +2,9 @@
   "campaigns": 
   [
     { 
-     "id_campaign": "1",
-     "image_detail": "http://cde.3.depor.pe/ima/0/0/3/8/6/386127.jpg",
-     "product_detail": 
+      "id":"1",
+      "image_detail": "http://cde.3.depor.pe/ima/0/0/3/8/6/386127.jpg",
+      "product_detail": 
       {
         "id_product":"1",
         "spectacle_name":"El Clasico de España R.Madrid vs FCBarcelona",
@@ -45,7 +45,7 @@
   "orders": 
   [
     { 
-      "order_id": "1",
+      "id": "1",
       "order_date": "19/03/2017",
       "order_price": "5000",
       "order_status":
@@ -83,6 +83,7 @@
   ],
   "customer": 
   { 
+      "id":"1",
       "cust_id": "1",
       "cust_firstname":"John",
       "cust_lastname" :"Doe",
@@ -93,5 +94,12 @@
       "cust_credit_card_type":"Visa",
       "cust_credit_card_number":"8r5ty65",
       "cust_status":"1" 
-  }
+  },
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
 }

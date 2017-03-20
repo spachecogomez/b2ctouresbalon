@@ -13,12 +13,14 @@ import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
 import { AppComponent } from './app.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
+import { ObjectNgforPipe } from './object-ngfor.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DetailsComponent,
-    HomeComponent
+    HomeComponent,
+    ObjectNgforPipe
   ],
   imports: [
     BrowserModule,
