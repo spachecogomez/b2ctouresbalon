@@ -26,11 +26,19 @@
                 <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li>
               </ul>
             </li>-->
-            <li class="search" >
+             <li class="search">
+               <a [routerLink]="['/login']">
+                 <i class="fa fa-users" aria-hidden="true"></i>
+                 Login
+                 </a>
+              </li>
+             <!-- <a class="btn btn-success">
+              <i class="fa fa-shopping-cart"></i> Agregar al Carrito</a>-->
+            <!--<li class="search" >
               <div >
                 <input width="100" placeholder="Buscar Plan Turistico" [(ngModel)]="selected" [typeahead]="states" class="form-control">
               </div>
-            </li>
+            </li>-->
           </ul>
         </div><!--/.nav-collapse -->
       </div><!--/.container-fluid -->
