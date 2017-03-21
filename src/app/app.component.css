@@ -4,9 +4,12 @@
     margin-left:8%;
     margin-right:8%
 }
-.search{
+.search,.input-group{
     float:right;
-    /*margin-top:1%;*/
+    margin-top:1%;
+}
+.login{
+    float:right;
 }
 .navbar-nav{
     width: 90%
