@@ -27,18 +27,16 @@
               </ul>
             </li>-->
              <li class="login">
+                <a class="btn">
+                 <i class="fa fa-shopping-cart"></i>
+                </a>
+              </li>
+             <li class="login">
                <a [routerLink]="['/login']">
                  <i class="fa fa-users" aria-hidden="true"></i>
                  Login
                  </a>
               </li>
-             <!-- <a class="btn btn-success">
-              <i class="fa fa-shopping-cart"></i> Agregar al Carrito</a>-->
-            <!--<li class="search" >
-              <div>
-                <input width="100" placeholder="Buscar Plan Turistico" [(ngModel)]="selected" [typeahead]="products" class="form-control">
-              </div>
-            </li>-->
              <div class="input-group search" >
                 <input type="text" class="form-control" placeholder="Buscar Plan Turistico" [(ngModel)]="selected" [typeahead]="products">
                 <span class="input-group-btn">
