@@ -20,7 +20,13 @@ export class UsersService {
         })
        .map(res =>  res.json());
    
+  }
 
+   getUserdata(email : string){
+     console.log(email);
+    return this.http.get(`http://localhost:3000/customer?cust_email=${email}`).map(
+      (res) => res.json()
+    );
   }
 
 
