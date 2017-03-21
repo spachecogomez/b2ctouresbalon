@@ -17,6 +17,7 @@ import { ObjectNgforPipe } from './object-ngfor.pipe';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AdminComponent } from './admin/admin.component';
     ObjectNgforPipe,
     LoginComponent,
     RegisterComponent,
-    AdminComponent
+    AdminComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

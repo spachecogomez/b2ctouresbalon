@@ -59,11 +59,45 @@
   "orders": [
     {
       "id": "1",
-      "order_date": "19/03/2017",
+      "order_date": "20/03/2017",
       "order_price": "5000",
       "order_status": {
         "status_id": "1",
         "status_name": "En Validación"
+      },
+      "order_comments": "Orden de Prueba",
+      "customer_id" : "123",
+      "customer_details": {
+        "cust_id": "1",
+        "cust_firstname": "Carlos",
+        "cust_lastname": "Barcos",
+        "cust_phone": "(57)555-5555-55",
+        "cust_address": "Unknown Street Av 12"
+      },
+      "order_details": [
+        {
+          "item_id": "1",
+          "product_id ": "1",
+          "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+          "total_price": "5200",
+          "quantity": "1"
+        },
+        {
+          "item_id": "2",
+          "product_id ": "2",
+          "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+          "total_price": "4000",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "order_date": "19/03/2017",
+      "order_price": "8000",
+      "order_status": {
+        "status_id": "1",
+        "status_name": "En Reserva"
       },
       "order_comments": "Orden de Prueba",
       "customer_id" : "123",
