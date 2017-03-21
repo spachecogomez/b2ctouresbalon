@@ -66,6 +66,7 @@
         "status_name": "En Validación"
       },
       "order_comments": "Orden de Prueba",
+      "customer_id" : "123",
       "customer_details": {
         "cust_id": "1",
         "cust_firstname": "John",
@@ -94,7 +95,7 @@
   "customer": [
     {
       "id": "4",
-      "cust_id": "4",
+      "cust_id": "12312312",
       "cust_firstname": "John",
       "cust_lastname": "Doe",
       "cust_phone": "(57)555-5555-55",

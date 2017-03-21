@@ -11,7 +11,7 @@ import { AutenticationService } from '../services/autentication.service';
 export class LoginComponent implements OnInit {
 
   
-  public user = new User('','');
+  public user = new User('','',"");
   public errorMsg = '';  
 
   constructor( private _service:AutenticationService) { }

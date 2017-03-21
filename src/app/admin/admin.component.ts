@@ -11,15 +11,15 @@ import { UsersService } from '../services/users.service';
 export class AdminComponent implements OnInit {
 
 userArray =[];
+
  constructor(
         private _service:AutenticationService,private _user : UsersService){}
  
     ngOnInit(){
         this._service.checkCredentials();
         //user properties
-         var email = localStorage.getItem("email");
-         //traer todos los datos del usuario
-         this._user.getUserdata(email).subscribe(
+         var id = localStorage.getItem("id");
+         this._user.getUserdata(id).subscribe(
         (data) => this.userArray = data
       );
 

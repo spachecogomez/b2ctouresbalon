@@ -4,8 +4,8 @@ import { User }    from '../entities/users';
 
 
 var users = [
-  new User('admin@admin.com','adm9'),
-  new User('user1@gmail.com','a23')
+  new User('4','admin@admin.com','adm9'),
+  new User('4','user1@gmail.com','a23')
 ];
 
 @Injectable()
@@ -17,7 +17,7 @@ export class AutenticationService {
     var authenticatedUser = users.find(u => u.email === user.email);
     if (authenticatedUser && authenticatedUser.password === user.password){
       localStorage.setItem("user", JSON.stringify(authenticatedUser));
-      localStorage.setItem("email", JSON.stringify(user.email));
+      localStorage.setItem("id", authenticatedUser.id);
       this._router.navigate(['admin']);      
       return true;
     }

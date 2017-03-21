@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpModule, Http,Response} from '@angular/http';
-import {Observable} from 'rxjs/Observable';
 import { Customer }    from '../entities/customer';
 import 'rxjs/add/operator/map'
 
@@ -22,9 +21,9 @@ export class UsersService {
    
   }
 
-   getUserdata(email : string){
-     console.log(email);
-    return this.http.get(`http://localhost:3000/customer?cust_email=${email}`).map(
+   getUserdata(id : string){
+     //console.log(id);
+    return this.http.get(`http://localhost:3000/customer/${id}`).map(
       (res) => res.json()
     );
   }

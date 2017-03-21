@@ -27,6 +27,7 @@ export class DetailsComponent implements OnInit,OnDestroy {
     this.campaignService.getCampaign(this.id).subscribe(
        (data) => this.campaign = data
     );
+    
 
   }
 
