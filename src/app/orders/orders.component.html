@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li><a [routerLink]="['/admin/']"data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                <li class="active" ><a [routerLink]="['/admin/orders']" data-target-id="widgets"><i class="fa fa-list-alt fa-fw"></i>Ordenes</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="charts"><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="table"><i class="fa fa-table fa-fw"></i>Table</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="forms"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="calender"><i class="fa fa-calendar fa-fw"></i>Calender</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="library"><i class="fa fa-book fa-fw"></i>Library</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="applications"><i class="fa fa-pencil fa-fw"></i>Applications</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9 well admin-content" id="home">
+          <div class="content">
+            <div class="container">
+                  <div class="row">
+                      <div class="col-md-8">
+                          <table class="table">
+                              <thead>
+                                  <tr>
+                                      <th>
+                                          #Orden
+                                      </th>
+                                      <th>
+                                          Cliente
+                                      </th>
+                                      <th>
+                                          Precio
+                                      </th>
+                                       <th>
+                                          Orden Creada
+                                      </th>
+                                       <th>
+                                          Status Orden
+                                      </th>
+                                       <th>
+                                         
+                                      </th>
+                                      
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr class="active" *ngFor="let s of (orders | ObjNgFor)">
+                                    <td>
+                                        {{s.value.id}}
+                                    </td>
+                                     <td>
+                                       <div *ngFor='let t of (s.value | ObjNgFor)'>
+                                           <div *ngIf="t.value.cust_firstname">
+                                              {{t.value.cust_firstname}} {{t.value.cust_lastname}}
+                                           </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        ${{s.value.order_price}}
+                                    </td>
+                                    <td>
+                                        ${{s.value.order_date}}
+                                    </td>
+                                     <td>
+                                        <div *ngFor='let t of (s.value | ObjNgFor)'>
+                                           <div *ngIf="t.value.status_name">
+                                              {{t.value.status_name}}
+                                           </div>
+                                        </div>
+                                       
+                                    </td>
+                                    <td>
+                                      <button type="button" (click)="cancelOrder($event)" data-id="{{s.value.id}}" class="btn btn-danger">Cancelar Orden</button>
+                                    </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+            </div>
+
+                  
+                
+                <!--<div *ngFor="let o of orders">
+                </div>-->
+
+                         
+                </div>
+        </div>
+        
+  </div>
+</div>

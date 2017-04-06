@@ -1,18 +1,24 @@
-.img-thumbnail{
-    height: 150px;
-    width: 250px;
-}
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+
 .carrusel {
-    margin-left:5%;
-    margin-right:5%
+    margin-left:8%;
+    margin-right:8%
 }
-.search{
-/*float:right;
-    margin-top:1.5%;
-    width: 20%;*/
+.search,.input-group{
     float:right;
     margin-top:1%;
 }
+.login{
+    float:right;
+}
 .navbar-nav{
     width: 90%
+}
+.body{
+    margin-left:8%;
+    margin-right:8%;
+}
+.footer{
+    margin-left:8%;
+    margin-right:8%;
 }

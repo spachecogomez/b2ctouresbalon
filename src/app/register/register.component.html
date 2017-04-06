@@ -1,0 +1,78 @@
+<div class="container">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form" id="register_user">
+			<h2>Please Sign Up <small>It's free and always will be.</small></h2>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input type="text" [(ngModel)]="customer.cust_firstname" name="customer.cust_firstname" id="cust_firstname" class="form-control input-lg" placeholder="First Name" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="text"  [(ngModel)]="customer.cust_lastname" name="cust_lastname" id="cust_lastname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="text"  [(ngModel)]="customer.cust_id" name="cust_id" id="cust_id" class="form-control input-lg" placeholder="Identification" tabindex="2">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="text"  [(ngModel)]="customer.cust_phone" name="cust_phone" id="cust_phone" class="form-control input-lg" placeholder="Phone" tabindex="2">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="email" name="cust_email" [(ngModel)]="customer.cust_email" id="cust_email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+			</div>
+			<div class="form-group">
+				<input type="text" name="cust_address" [(ngModel)]="customer.cust_address" id="cust_address" class="form-control input-lg" placeholder="Address" tabindex="4">
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="password" name="cust_password" [(ngModel)]="customer.cust_password" id="cust_password" class="form-control input-lg" placeholder="Password" tabindex="5">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="password" name="password_confirmation" [(ngModel)]="customer.password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<p>Tipo de tarjeta de Credito</p>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<select name="cust_credit_card_type" [(ngModel)]="customer.cust_credit_card_type" id="cust_credit_card_type" class="form-control" tabindex="5">
+								<option value="Visa" selected="selected">Visa</option>
+								<option value="American">American Express</option>
+								<option value="MasterCard">MasterCard</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="cust_credit_card_number" name="cust_credit_card_number" [(ngModel)]="customer.cust_credit_card_number" id="password_confirmation" class="form-control input-lg" placeholder="Numero de Tarjeta" tabindex="6">
+					</div>
+				</div>
+			</div>
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6"><input type="submit" (click) ="createCustomer()" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+				<!--><div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>-->
+			</div>
+		</form>
+	</div>
+</div>
+</div>

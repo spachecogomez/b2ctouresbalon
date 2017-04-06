@@ -1,0 +1,367 @@
+{
+  "campaigns": [
+    {
+      "id": "1",
+      "image_detail": "http://cde.3.depor.pe/ima/0/0/3/8/6/386127.jpg",
+      "product_detail": {
+        "id_product": "1",
+        "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+        "spectacle_date": "23/04/2017",
+        "spectacle_city": "Madrid (España)",
+        "arrival_date": "20/04/2017",
+        "return_date": "25/04/2017",
+        "transport_detail": {
+          "transport_id": "1",
+          "transport_type": "Transporte Aereo",
+          "transport_price": "3000"
+        },
+        "spectacle_detail": {
+          "spectacle_id": "1",
+          "spectacle_type": "(Futból)",
+          "spectacle_price": "1200"
+        },
+        "accommodation_detail": {
+          "accommodation_id": "1",
+          "accommodation_type": "Hotel",
+          "accommodation_price": "1000"
+        }
+      },
+      "total_price": "5200",
+      "other_campaigns": [
+        {
+          "id_campaign": "2",
+          "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+          "image_detail": "http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg"
+        },
+        {
+          "id_campaign": "3",
+          "spectacle_name": "Community Shield Final : Manchester City vs Everton",
+          "image_detail": "http://worldsoccertalk.com/wp-content/uploads/2016/08/community-shield-600x393.jpg"
+        },
+        {
+          "id_campaign": "4",
+          "spectacle_name": "Final Copa Colombia : Atletico Bucaramanga vs DIM",
+          "image_detail": "http://www.eltiempo.com/files/article_main/uploads/2017/02/11/589f80b78cab5.jpeg"
+        },
+        {
+          "id_campaign": "6",
+          "spectacle_name": "Final ATP 500 Buenos Aires",
+          "image_detail": "https://img.difoosion.com/wp-content/blogs.dir/29/files/2016/06/Raqueta-con-pelota-de-tenis.jpg"
+        },
+        {
+          "id_campaign": "7",
+          "spectacle_name": "Final USA Open",
+          "image_detail": "http://e1.365dm.com/16/08/16-9/20/andy-murray-us-open-tennis_3773314.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "image_detail": "http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg",
+      "product_detail": {
+        "id_product": "1",
+        "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+        "spectacle_date": "23/04/2018",
+        "spectacle_city": "Londres (Inglaterra)",
+        "arrival_date": "20/04/2018",
+        "return_date": "25/04/2018",
+        "transport_detail": {
+          "transport_id": "1",
+          "transport_type": "Transporte Aereo",
+          "transport_price": "3000"
+        },
+        "spectacle_detail": {
+          "spectacle_id": "1",
+          "spectacle_type": "(Futból)",
+          "spectacle_price": "1200"
+        },
+        "accommodation_detail": {
+          "accommodation_id": "1",
+          "accommodation_type": "Hotel",
+          "accommodation_price": "1000"
+        }
+      },
+      "total_price": "5200",
+      "other_campaigns": [
+        {
+          "id_campaign": "1",
+          "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+          "image_detail": "http://cde.3.depor.pe/ima/0/0/3/8/6/386127.jpg"
+        },
+        {
+          "id_campaign": "3",
+          "spectacle_name": "Community Shield Final : Manchester City vs Everton",
+          "image_detail": "http://worldsoccertalk.com/wp-content/uploads/2016/08/community-shield-600x393.jpg"
+        },
+        {
+          "id_campaign": "4",
+          "spectacle_name": "Final Copa Colombia : Atletico Bucaramanga vs DIM",
+          "image_detail": "http://www.eltiempo.com/files/article_main/uploads/2017/02/11/589f80b78cab5.jpeg"
+        },
+        {
+          "id_campaign": "6",
+          "spectacle_name": "Final ATP 500 Buenos Aires",
+          "image_detail": "https://img.difoosion.com/wp-content/blogs.dir/29/files/2016/06/Raqueta-con-pelota-de-tenis.jpg"
+        },
+        {
+          "id_campaign": "7",
+          "spectacle_name": "Final USA Open",
+          "image_detail": "http://e1.365dm.com/16/08/16-9/20/andy-murray-us-open-tennis_3773314.jpg"
+        }
+      ]
+    },
+     {
+      "id": "3",
+      "image_detail": "http://worldsoccertalk.com/wp-content/uploads/2016/08/community-shield-600x393.jpg",
+      "product_detail": {
+        "id_product": "1",
+        "spectacle_name": "Community Shield Final : Manchester City vs Everton",
+        "spectacle_date": "23/04/2018",
+        "spectacle_city": "Londres (Inglaterra)",
+        "arrival_date": "20/04/2018",
+        "return_date": "25/04/2018",
+        "transport_detail": {
+          "transport_id": "1",
+          "transport_type": "Transporte Aereo",
+          "transport_price": "3000"
+        },
+        "spectacle_detail": {
+          "spectacle_id": "1",
+          "spectacle_type": "(Futból)",
+          "spectacle_price": "1200"
+        },
+        "accommodation_detail": {
+          "accommodation_id": "1",
+          "accommodation_type": "Hotel",
+          "accommodation_price": "1000"
+        }
+      },
+      "total_price": "5200",
+      "other_campaigns": [
+        {
+          "id_campaign": "1",
+          "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+          "image_detail": "http://cde.3.depor.pe/ima/0/0/3/8/6/386127.jpg"
+        },
+        {
+          "id_campaign": "2",
+          "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+          "image_detail": "http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg"
+        },
+        {
+          "id_campaign": "4",
+          "spectacle_name": "Final Copa Colombia : Atletico Bucaramanga vs DIM",
+          "image_detail": "http://www.eltiempo.com/files/article_main/uploads/2017/02/11/589f80b78cab5.jpeg"
+        },
+        {
+          "id_campaign": "6",
+          "spectacle_name": "Final ATP 500 Buenos Aires",
+          "image_detail": "https://img.difoosion.com/wp-content/blogs.dir/29/files/2016/06/Raqueta-con-pelota-de-tenis.jpg"
+        },
+        {
+          "id_campaign": "7",
+          "spectacle_name": "Final USA Open",
+          "image_detail": "http://e1.365dm.com/16/08/16-9/20/andy-murray-us-open-tennis_3773314.jpg"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "image_detail": "http://www.eltiempo.com/files/article_main/uploads/2017/02/11/589f80b78cab5.jpeg",
+      "product_detail": {
+        "id_product": "1",
+        "spectacle_name": "Final Copa Colombia : Atletico Bucaramanga vs DIM",
+        "spectacle_date": "23/04/2018",
+        "spectacle_city": "Bucaramanga (Colombia)",
+        "arrival_date": "20/04/2018",
+        "return_date": "25/04/2018",
+        "transport_detail": {
+          "transport_id": "1",
+          "transport_type": "Transporte Aereo",
+          "transport_price": "3000"
+        },
+        "spectacle_detail": {
+          "spectacle_id": "1",
+          "spectacle_type": "(Futból)",
+          "spectacle_price": "1200"
+        },
+        "accommodation_detail": {
+          "accommodation_id": "1",
+          "accommodation_type": "Hotel",
+          "accommodation_price": "1000"
+        }
+      },
+      "total_price": "5200",
+      "other_campaigns": [
+        {
+          "id_campaign": "1",
+          "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+          "image_detail": "http://cde.3.depor.pe/ima/0/0/3/8/6/386127.jpg"
+        },
+        {
+          "id_campaign": "2",
+          "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+          "image_detail": "http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg"
+        },
+         {
+          "id_campaign": "3",
+          "spectacle_name": "Community Shield Final : Manchester City vs Everton",
+          "image_detail": "http://worldsoccertalk.com/wp-content/uploads/2016/08/community-shield-600x393.jpg"
+        },
+        {
+          "id_campaign": "6",
+          "spectacle_name": "Final ATP 500 Buenos Aires",
+          "image_detail": "https://img.difoosion.com/wp-content/blogs.dir/29/files/2016/06/Raqueta-con-pelota-de-tenis.jpg"
+        },
+        {
+          "id_campaign": "7",
+          "spectacle_name": "Final USA Open",
+          "image_detail": "http://e1.365dm.com/16/08/16-9/20/andy-murray-us-open-tennis_3773314.jpg"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "order_date": "20/03/2017",
+      "order_price": "5000",
+      "order_status": {
+        "status_id": "1",
+        "status_name": "En Validación"
+      },
+      "order_comments": "Orden de Prueba",
+      "customer_id" : "123",
+      "customer_details": {
+        "cust_id": "1",
+        "cust_firstname": "Carlos",
+        "cust_lastname": "Barcos",
+        "cust_phone": "(57)555-5555-55",
+        "cust_address": "Unknown Street Av 12"
+      },
+      "order_details": [
+        {
+          "item_id": "1",
+          "product_id ": "1",
+          "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+          "total_price": "5200",
+          "quantity": "1"
+        },
+        {
+          "item_id": "2",
+          "product_id ": "2",
+          "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+          "total_price": "4000",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "order_date": "19/03/2017",
+      "order_price": "8000",
+      "order_status": {
+        "status_id": "1",
+        "status_name": "En Reserva"
+      },
+      "order_comments": "Orden de Prueba",
+      "customer_id" : "123",
+      "customer_details": {
+        "cust_id": "1",
+        "cust_firstname": "John",
+        "cust_lastname": "Doe",
+        "cust_phone": "(57)555-5555-55",
+        "cust_address": "Unknown Street Av 12"
+      },
+      "order_details": [
+        {
+          "item_id": "1",
+          "product_id ": "1",
+          "spectacle_name": "El Clasico de España R.Madrid vs FCBarcelona",
+          "total_price": "5200",
+          "quantity": "1"
+        },
+        {
+          "item_id": "2",
+          "product_id ": "2",
+          "spectacle_name": "FA Cup Final : Manchester United vs Chelsea",
+          "total_price": "4000",
+          "quantity": "1"
+        }
+      ]
+    }
+  ],
+  "customer": [
+    {
+      "id": "4",
+      "cust_id": "12312312",
+      "cust_firstname": "John",
+      "cust_lastname": "Doe",
+      "cust_phone": "(57)555-5555-55",
+      "cust_address": "Unknown Street Av 12",
+      "cust_email": "john_doe@javeriana.edu.co",
+      "cust_password": "89230iuweiq24120o",
+      "cust_credit_card_type": "Visa",
+      "cust_credit_card_number": "8r5ty65",
+      "cust_status": "1"
+    },
+    {
+      "id": "1",
+      "cust_id": "1",
+      "cust_firstname": "John",
+      "cust_lastname": "Doe",
+      "cust_phone": "(57)555-5555-55",
+      "cust_address": "Unknown Street Av 12",
+      "cust_email": "john_doe@javeriana.edu.co",
+      "cust_password": "89230iuweiq24120o",
+      "cust_credit_card_type": "Visa",
+      "cust_credit_card_number": "8r5ty65",
+      "cust_status": "1"
+    },
+    {
+      "id": "2",
+      "cust_status": 1,
+      "cust_firstname": "sdasd",
+      "cust_lastname": "asdasd",
+      "cust_id": "asdasd",
+      "cust_phone": "asdasd",
+      "cust_email": "ferneycaceres@gmail.com",
+      "cust_address": "dasdasd",
+      "cust_password": "dasd",
+      "password_confirmation": "asdad",
+      "cust_credit_card_type": "American",
+      "cust_credit_card_number": "dasdasd"
+    },
+    {
+      "id": "4787",
+      "cust_status": 1,
+      "cust_firstname": "Ferney",
+      "cust_lastname": "Caceres",
+      "cust_id": "1098635552",
+      "cust_phone": "3154465375",
+      "cust_email": "admin@admin.com",
+      "cust_address": "Calle 105a 14-92 Edificio Torre Parque Francia Oficina 414",
+      "cust_password": "12345",
+      "password_confirmation": "12345",
+      "cust_credit_card_type": "American",
+      "cust_credit_card_number": "2123"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

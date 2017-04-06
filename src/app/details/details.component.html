@@ -1,0 +1,98 @@
+<!--first level-->
+<!--<p>{{campaign.id}}</p>-->
+<!--secound level-->
+<!--<div *ngFor='let s of (campaign | ObjNgFor)'>
+  {{s.value.spectacle_name}}-->
+  <!--third level-->
+  <!--<div *ngFor='let t of (s.value | ObjNgFor)'>
+    {{t.value.spectacle_name}}
+  </div>
+</div>-->
+
+<div class="thumbnail">
+  <img class="img-responsive" src="{{campaign.image_detail}}" alt="">
+  <div class="caption-full">
+      <h4 class="pull-right"><b> ${{campaign.total_price}}</b></h4>
+      <div *ngFor='let s of (campaign | ObjNgFor)'>
+        <h4 *ngIf="s.value.spectacle_name">
+         {{s.value.spectacle_name}}
+        </h4>
+        <div *ngIf="s.value.spectacle_date">
+         <b> Fecha del Espectaculo:</b>
+          {{s.value.spectacle_date}}
+        </div>
+        <div *ngIf="s.value.spectacle_date">
+          <b>Ciudad del evento:</b>
+          {{s.value.spectacle_city}}
+        </div>
+        <div *ngIf="s.value.arrival_date">
+         <b> Fecha de llegada:</b>
+          {{s.value.arrival_date}}
+        </div>
+        <div *ngIf="s.value.return_date">
+         <b> Fecha de regreso:</b>
+          {{s.value.return_date}}
+        </div>
+        <div *ngIf="s.value.return_date">
+         <b> Fecha de regreso:</b>
+          {{s.value.return_date}}
+        </div>
+      </div>
+      <br>
+  </div>
+  <div class="ratings">
+      <div class="pull-right">
+        <a class="btn btn-success">
+          <i class="fa fa-shopping-cart"></i> Agregar al Carrito</a>
+      </div>
+      <p>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star"></span>
+          <span class="glyphicon glyphicon-star-empty"></span>
+          4.0 stars
+      </p>
+  </div>
+  </div>
+    <div class="body">
+        <div class="row" >
+            <div *ngFor='let s of (campaign | ObjNgFor)'>
+                <div *ngFor='let t of (s.value | ObjNgFor)'>
+                    <div *ngIf="t.value.spectacle_name">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="col-item">
+                                    <div class="photo">
+                                        <img src="{{t.value.image_detail}}" class="img-responsive" alt="a" />
+                                    </div>
+                                    <div class="info">
+                                        <div class="row">
+                                            <div class="price col-md-10">
+                                                <h5>{{t.value.spectacle_name}}</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="rating hidden-sm col-md-8">
+                                                <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                                                </i><i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="separator clear-left">
+                                            <p class="btn-add">
+                                                <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Agregar al Carrito</a></p>
+                                            <p class="btn-details">
+                                                <i class="fa fa-list"></i>
+                                                    <a [routerLink]="['/details', t.value.id_campaign]" class="hidden-sm">Mas detalles</a>
+                                            </p>
+                                        </div>
+                                        <div class="clearfix">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
