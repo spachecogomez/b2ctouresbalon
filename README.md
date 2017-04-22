@@ -1,6 +1,6 @@
 # B2ctouresbalon
 
-This Front application was developed by Ferney Cáceres.
+This Front application was developed by Ferney Cáceres. 
 
 We are currently working in OMS (Backend).... 
 
