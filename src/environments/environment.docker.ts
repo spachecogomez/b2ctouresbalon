@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: 'prod.server.com'
+  url: 'docker.server.com'
 };

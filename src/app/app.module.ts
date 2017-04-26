@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { OrdersComponent } from './orders/orders.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
