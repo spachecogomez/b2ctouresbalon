@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { routes } from './app.router';
 
 import { AlertModule } from 'ng2-bootstrap';
-import { DropdownModule } from 'ng2-bootstrap/dropdown';
+//import { DropdownModule } from 'ng2-bootstrap/dropdown';
 import { CarouselModule } from 'ng2-bootstrap/carousel';
 import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
 
@@ -36,7 +36,6 @@ import { OrdersComponent } from './orders/orders.component';
     HttpModule,
     routes,
     AlertModule.forRoot(),
-    DropdownModule.forRoot(),
     CarouselModule.forRoot(),
     TypeaheadModule.forRoot()
   ],
