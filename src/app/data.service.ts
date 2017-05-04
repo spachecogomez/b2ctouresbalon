@@ -9,9 +9,9 @@ export class DataService {
   constructor(private http: Http ) { }
 
   CampaignsData(){
-    console.log(environment.url);
-    console.log(environment.port);
-    return this.http.get('http://localhost:3000/campaigns').map(
+    var url = environment.url;
+    var port = environment.port;
+    return this.http.get('http://'+url+':'+port+'/campaigns').map(
       (res) => res.json()
     );
   }
