@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http,Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { Environment } from '../environments/environment';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class DataService {
@@ -9,8 +9,8 @@ export class DataService {
   constructor(private http: Http ) { }
 
   CampaignsData(){
-    console.log(Environment.url);
-    console.log(Environment.port);
+    console.log(environment.url);
+    console.log(environment.port);
     return this.http.get('http://localhost:3000/campaigns').map(
       (res) => res.json()
     );
