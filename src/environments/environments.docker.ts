@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  url: 'docker.server.com'
+  url : 'customerservice',
+  port:'80'
 };
