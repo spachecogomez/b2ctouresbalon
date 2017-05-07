@@ -11,7 +11,7 @@ export class OrdersService {
   getOrders(){
      var url = environment.url;
      var port = environment.port;
-     return this.http.get(`http://'+url+':'+port+'/orders`).map(
+     return this.http.get('http://'+url+':'+port+'/orders').map(
       (res) => res.json()
     );
   }
