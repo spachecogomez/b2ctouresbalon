@@ -4,7 +4,7 @@ import { User }    from '../entities/users';
 
 
 var users = [
-  new User('4','admin@admin.com','adm9'),
+  new User('4','admin@admin.com','123'),
   new User('4','user1@gmail.com','a23')
 ];
 

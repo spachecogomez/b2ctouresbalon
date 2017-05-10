@@ -1,12 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes , RouterModule } from '@angular/router';
 
-import { DetailsComponent } from './details/details.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './admin/admin.component';
-import { OrdersComponent } from './orders/orders.component';
+import { DetailsComponent } from './components/details/details.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 export const router : Routes =[
     { path:'', component: HomeComponent },  

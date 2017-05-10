@@ -1,7 +1,7 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CampaignDetailsService } from '../services/campaign-details.service';
-import { ObjectNgforPipe } from '../object-ngfor.pipe';
+import { CampaignDetailsService } from '../../services/campaign-details.service';
+import { ObjectNgforPipe } from '../../object-ngfor.pipe';
 
 
 @Component({

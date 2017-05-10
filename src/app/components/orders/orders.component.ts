@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OrdersService } from '../services/orders.service';
-import { ObjectNgforPipe } from '../object-ngfor.pipe';
+import { OrdersService } from '../../services/orders.service';
+import { ObjectNgforPipe } from '../../object-ngfor.pipe';
 
 @Component({
   selector: 'app-orders',

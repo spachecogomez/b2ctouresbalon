@@ -11,13 +11,13 @@ import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
 
 
 import { AppComponent } from './app.component';
-import { DetailsComponent } from './details/details.component';
-import { HomeComponent } from './home/home.component';
+import { DetailsComponent } from './components/details/details.component';
+import { HomeComponent } from './components/home/home.component';
 import { ObjectNgforPipe } from './object-ngfor.pipe';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { AdminComponent } from './admin/admin.component';
-import { OrdersComponent } from './orders/orders.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 @NgModule({
   declarations: [
