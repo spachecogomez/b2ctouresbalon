@@ -8,7 +8,10 @@
     float:right;
     margin-top:1%;
 }
-.login{
+#login{
+    float:right;
+}
+#cart{
     float:right;
 }
 .navbar-nav{
