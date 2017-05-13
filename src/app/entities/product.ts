@@ -1,4 +1,4 @@
-export class Product {
+export interface IProduct {
     id:number;
     productName:string;
     imageUrl:string;

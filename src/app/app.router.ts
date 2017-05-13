@@ -7,9 +7,10 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { ProductsComponent } from './components/products/products.component';
 
 export const router : Routes =[
-    { path:'', component: HomeComponent },  
+    { path:'', component: ProductsComponent },  
     { path:'details/:id', component: DetailsComponent },
     { path:'login', component: LoginComponent },
     { path:'register', component: RegisterComponent },
