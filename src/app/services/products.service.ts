@@ -8,6 +8,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 import { environment } from '../../environments/environment';
+import { AppComponent } from '../app.component';
 
 @Injectable()
 export class ProductsService {
@@ -53,9 +54,7 @@ export class ProductsService {
      {
         local.push(product);
         sessionStorage.setItem("ShoppingCart",JSON.stringify(local));
-     }
-     
-     
+     }   
     
   }
 

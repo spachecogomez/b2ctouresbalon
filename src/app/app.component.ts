@@ -16,6 +16,9 @@ export class AppComponent {
   title = 'app works!';
   plans = [];
 
+
+  public countProducts = JSON.parse(sessionStorage.getItem("ShoppingCart")).length;
+
   public selected:string;
   public products:string[] = ['El Clasico de España R.Madrid vs FCBarcelona',
                               'FA Cup Final : Manchester United vs Chelsea',
