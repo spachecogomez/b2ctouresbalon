@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { IProduct } from '../entities/product';
 import { Http,Headers,Response  } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
+import { AppComponent } from '../app.component';
+import { CounterService } from './counter.service';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
-import { environment } from '../../environments/environment';
-import { AppComponent } from '../app.component';
-import {BehaviorSubject} from 'rxjs/Rx';
-import { CounterService } from './counter.service';
+
 
 @Injectable()
 export class ProductsService {
@@ -18,8 +18,6 @@ export class ProductsService {
 	allProducts: IProduct[] = [];
   selectedItems: IProduct[] = [];
 
-
-  public countProducts:BehaviorSubject<number> = new BehaviorSubject<number>(this.getCountProducts());
   
 
   constructor(private http: Http,private counter: CounterService) {
@@ -58,6 +56,7 @@ export class ProductsService {
     //Array Session
      if (temp)
      {
+       //There are some objects in ShoppingCart
         temp.push(product);
         sessionStorage.setItem("ShoppingCart",JSON.stringify(temp));
      }
@@ -80,18 +79,15 @@ export class ProductsService {
    
   }
 
-  getSessionStorage():void{
+  getSessionStorage(){
 
-    let cart = sessionStorage.getItem("ShoppingCart");
-    console.log(JSON.parse(cart));
-    
+    return JSON.parse(sessionStorage.getItem("ShoppingCart"));
   }
   
-  getSelectedProducts() : IProduct[] {
+  getSelectedProducts() {
 
-    this.getSessionStorage();
-
-    return this.selectedItems;
+    return this.getSessionStorage();
+    
 
   }
   private handleError(error: Response) {

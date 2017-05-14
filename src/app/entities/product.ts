@@ -5,6 +5,7 @@ export interface IProduct {
     starRating: number;
     info:string;
     price:number;
+    quantity :number;
 }
 
 /*export class Product {

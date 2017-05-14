@@ -28,6 +28,8 @@ export class ProductsComponent implements OnInit {
   }
   addToCart(product){
     console.log("Agregar a Carrito : "+product.productName);
+    //Add one 
+    product.quantity = 1;
     this.productsService.addProduct(product);
   }
 
