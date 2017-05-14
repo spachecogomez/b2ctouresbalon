@@ -9,6 +9,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 import { environment } from '../../environments/environment';
 import { AppComponent } from '../app.component';
+import {BehaviorSubject} from 'rxjs/Rx';
+import { CounterService } from './counter.service';
 
 @Injectable()
 export class ProductsService {
@@ -16,7 +18,16 @@ export class ProductsService {
 	allProducts: IProduct[] = [];
   selectedItems: IProduct[] = [];
 
-  constructor(private http: Http) { }
+
+  public countProducts:BehaviorSubject<number> = new BehaviorSubject<number>(this.getCountProducts());
+  
+
+  constructor(private http: Http,private counter: CounterService) {
+
+    //Check count Products shopping cart
+    this.counter.sendMessage(this.getCountProducts());
+
+   }
 
   getProducts(): Observable<IProduct[]> {
       var url = environment.url;
@@ -54,8 +65,19 @@ export class ProductsService {
      {
         local.push(product);
         sessionStorage.setItem("ShoppingCart",JSON.stringify(local));
-     }   
-    
+     } 
+     this.counter.sendMessage(this.getCountProducts());
+     
+  }
+
+  getCountProducts(){
+    let count = 0;
+    if (sessionStorage.getItem("ShoppingCart"))
+    {
+       count = JSON.parse(sessionStorage.getItem("ShoppingCart")).length;
+    }
+    return count;
+   
   }
 
   getSessionStorage():void{
@@ -68,7 +90,6 @@ export class ProductsService {
   getSelectedProducts() : IProduct[] {
 
     this.getSessionStorage();
-    //console.log(this.selectedItems);
 
     return this.selectedItems;
 

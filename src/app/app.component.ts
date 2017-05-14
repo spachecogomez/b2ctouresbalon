@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+import { CounterService } from './services/counter.service';
+import { Subscription } from 'rxjs/Subscription';
 
 import { routes } from './app.router';
 
@@ -10,14 +12,16 @@ import 'rxjs/add/observable/of';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers : [DataService]
+  providers : [DataService,CounterService]
 })
 export class AppComponent {
   title = 'app works!';
   plans = [];
 
 
-  public countProducts = JSON.parse(sessionStorage.getItem("ShoppingCart")).length;
+  countProducts = 0;
+  message: any;
+  subscription: Subscription;
 
   public selected:string;
   public products:string[] = ['El Clasico de España R.Madrid vs FCBarcelona',
@@ -27,9 +31,13 @@ export class AppComponent {
                               'Final ATP 500 Buenos Aires',
                               'Final USA Open'];
 
-  constructor (private dataService : DataService){}
+  constructor (private dataService : DataService,private _counter : CounterService){
+    //Ask num products in Shopping cart
+    this.subscription = this._counter.getMessage().subscribe(message => { this.message = message; });
+  }
 
   ngOnInit(){
+    
   
   }
 
