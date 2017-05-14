@@ -13,9 +13,9 @@ export class HomeComponent implements OnInit {
   constructor (private dataService : DataService){}
 
   ngOnInit() {
-      this.dataService.CampaignsData().subscribe(
+      /*this.dataService.CampaignsData().subscribe(
         (data) => this.plans = data
-      );
+      );*/
   }
 
 }

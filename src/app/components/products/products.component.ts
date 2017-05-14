@@ -17,10 +17,18 @@ export class ProductsComponent implements OnInit {
   constructor(private productsService : ProductsService) { }
 
   ngOnInit() {
-      this.productsService.getProducts()
+     this.getProducts();
+  }
+
+  getProducts():void {
+     this.productsService.getProducts()
           .subscribe(products => this.products = products,
           error => this.errorMessage = <any>error);
-    
+
+  }
+  addToCart(product){
+    console.log("Agregar a Carrito : "+product.productName);
+    this.productsService.addProduct(product);
   }
 
 }

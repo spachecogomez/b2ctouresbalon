@@ -1,3 +1,36 @@
-<p>
-  products works!
-</p>
+<div class="body">
+  <div class="row">
+    	<div class="col-xs-12 col-sm-6 col-md-3" *ngFor="let product of products">
+         <div class="col-item">
+                <div class="photo">
+                    <img src="{{product.imageUrl}}" class="img-responsive" alt="a" />
+                </div>
+                <div class="info">
+                    <div class="row">
+                        <div class="price col-md-10">
+                            <h5>{{product.productName}}</h5>
+                            <h5 class="price-text-color">${{product.price}}</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="rating hidden-sm col-md-8">
+                            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                            </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                            </i><i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="separator clear-left">
+                        <p class="btn-add">
+                            <i class="fa fa-shopping-cart"></i><a style="cursor:pointer" (click)="addToCart(product)" class="hidden-sm">Agregar al Carrito</a></p>
+                        <p class="btn-details">
+                            <i class="fa fa-list"></i>
+                              <a [routerLink]="['/details', product.id]" class="hidden-sm">Mas detalles</a>
+                        </p>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+    	</div>
+  </div>
+</div>

@@ -8,14 +8,16 @@ import { HomeComponent } from './components/home/home.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
+import { CartComponent } from './components/cart/cart.component';
 
 export const router : Routes =[
-    { path:'', component: ProductsComponent },  
+    { path:'', component: HomeComponent },
+    { path:'cart', component: CartComponent },     
     { path:'details/:id', component: DetailsComponent },
     { path:'login', component: LoginComponent },
     { path:'register', component: RegisterComponent },
     { path:'admin', component: AdminComponent },
-    { path:'admin/orders', component: OrdersComponent }                    
+    { path:'admin/orders', component: OrdersComponent }                 
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(router);
