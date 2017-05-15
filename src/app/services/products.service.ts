@@ -83,6 +83,20 @@ export class ProductsService {
 
     return JSON.parse(sessionStorage.getItem("ShoppingCart"));
   }
+
+  updateSessionStorage(products){
+
+    sessionStorage.removeItem("ShoppingCart");
+    if (products.length > 0)
+    {
+       sessionStorage.setItem("ShoppingCart",JSON.stringify(products));
+    }
+   
+    this.counter.sendMessage(this.getCountProducts());
+
+
+
+  }
   
   getSelectedProducts() {
 

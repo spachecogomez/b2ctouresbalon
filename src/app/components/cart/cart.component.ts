@@ -46,6 +46,14 @@ export class CartComponent implements OnInit {
       return acc += item
     }, 0)
   }
+  removeProduct(id){
+    let actualCart = this._productsService.getSessionStorage();
+    actualCart.splice(id,1);
+    this._productsService.updateSessionStorage(actualCart);
+    //sessionStorage.removeItem(id);
+    this.getProductsForCart();
+
+  }
 
   ngOnInit() :void {
 
