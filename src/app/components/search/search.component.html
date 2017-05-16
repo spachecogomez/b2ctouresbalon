@@ -8,10 +8,7 @@
 </form>
 
 <div *ngIf="searchRes">
-
-<div *ngFor="let res of searchRes">
-    {{res.productName}} - $ {{res.price}}
-
-</div>
-
+  <div *ngFor="let res of searchRes">
+      {{res.productName}} - $ {{res.price}}
+  </div>
 </div>
