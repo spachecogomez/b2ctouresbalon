@@ -1,0 +1,17 @@
+<h1>Consultar Productos</h1>
+<p class="lead">Usa el buscador de productos turisticos, para que encuentres tu mejor opción de viajes. </p>
+<hr>
+<form>
+  <div class="form-group">
+      <input class="form-control" type="text" placeholder="Buscar por nombre de evento..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchProduct()"/>
+  </div>
+</form>
+
+<div *ngIf="searchRes">
+
+<div *ngFor="let res of searchRes">
+    {{res.productName}} - $ {{res.price}}
+
+</div>
+
+</div>

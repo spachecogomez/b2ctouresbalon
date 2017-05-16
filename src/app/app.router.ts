@@ -9,10 +9,12 @@ import { AdminComponent } from './components/admin/admin.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
+import { SearchComponent } from './components/search/search.component';
 
 export const router : Routes =[
     { path:'', component: HomeComponent },
-    { path:'cart', component: CartComponent },     
+    { path:'cart', component: CartComponent },
+    { path:'search', component : SearchComponent},     
     { path:'details/:id', component: DetailsComponent },
     { path:'login', component: LoginComponent },
     { path:'register', component: RegisterComponent },

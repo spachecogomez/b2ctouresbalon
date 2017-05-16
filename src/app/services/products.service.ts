@@ -27,6 +27,15 @@ export class ProductsService {
 
    }
 
+   searchProducts(str:string){
+     var url = environment.url;
+     var port = environment.port;
+     var searchUrl = 'http://'+url+':'+port+'/products?productName='+str;
+     return this.http.get(searchUrl)
+            .map(res => res.json())
+     
+   }
+
   getProducts(): Observable<IProduct[]> {
       var url = environment.url;
       var port = environment.port;
