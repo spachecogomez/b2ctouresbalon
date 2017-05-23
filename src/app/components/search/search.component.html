@@ -7,8 +7,16 @@
   </div>
 </form>
 
+  
 <div *ngIf="searchRes">
   <div *ngFor="let res of searchRes">
-      {{res.productName}} - $ {{res.price}}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="search-res well">
+              <h4>{{res.productName}} - $ {{res.price}}</h4>
+            </div>
+        </div>
+    </div>
+     
   </div>
 </div>
