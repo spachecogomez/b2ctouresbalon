@@ -14,79 +14,123 @@
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
             </ul>
         </div>
-        <div class="col-md-9 well admin-content" id="home">
-          <div class="content">
-            <div class="container">
-                  <div class="row">
-                      <div class="col-md-8">
-                          <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th>
-                                          #Orden
-                                      </th>
-                                      <th>
-                                          Cliente
-                                      </th>
-                                      <th>
-                                          Precio
-                                      </th>
-                                       <th>
-                                          Orden Creada
-                                      </th>
-                                       <th>
-                                          Status Orden
-                                      </th>
-                                       <th>
-                                         
-                                      </th>
-                                      
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr class="active" *ngFor="let s of (orders | ObjNgFor)">
-                                    <td>
-                                        {{s.value.id}}
-                                    </td>
-                                     <td>
-                                       <div *ngFor='let t of (s.value | ObjNgFor)'>
-                                           <div *ngIf="t.value.cust_firstname">
-                                              {{t.value.cust_firstname}} {{t.value.cust_lastname}}
-                                           </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        ${{s.value.order_price}}
-                                    </td>
-                                    <td>
-                                        ${{s.value.order_date}}
-                                    </td>
-                                     <td>
-                                        <div *ngFor='let t of (s.value | ObjNgFor)'>
-                                           <div *ngIf="t.value.status_name">
-                                              {{t.value.status_name}}
-                                           </div>
-                                        </div>
-                                       
-                                    </td>
-                                    <td>
-                                      <button type="button" (click)="cancelOrder($event)" data-id="{{s.value.id}}" class="btn btn-danger">Cancelar Orden</button>
-                                    </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-            </div>
-
-                  
+        <div class="col-md-10 ">
+        <tabset>
+            <tab heading='Lista Ordenes'>
+                <br>
+                    <div class="panel panel-default panel-table">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col col-xs-6">
+                                <h3 class="panel-title">Listado de Ordenes</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-list">
+                        <thead>
+                            <tr>
+                                <th>#Orden</th>
+                                <th>Cliente</th>
+                                <th>Precio</th>
+                                <th>Orden Creada</th>
+                                <th>Status Orden</th>
+                                <th><em class="fa fa-cog"></em></th>
+                            </tr> 
+                        </thead>
+                        <tbody>
+                            <tr class="active" *ngFor="let o of orders">
+                                <td class="hidden-xs">{{o.order_id}}</td>
+                                <td>John Doe</td>
+                                <td>{{o.order_price}}</td>
+                                <td>{{o.order_date}}</td>
+                                <td>{{o.order_status.status_name}}</td>
+                                <td align="center">
+                                    <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                    <a class="btn btn-danger"><em class="fa fa-trash-o"></em></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                        <div class="col col-xs-4">Page 1 of 5
+                        </div>
+                        <div class="col col-xs-8">
+                            <ul class="pagination hidden-xs pull-right">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            </ul>
+                            <ul class="pagination visible-xs pull-right">
+                                <li><a href="#">«</a></li>
+                                <li><a href="#">»</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+        
                 
-                <!--<div *ngFor="let o of orders">
-                </div>-->
+            </tab>
 
-                         
-                </div>
+
+            <tab heading='Buscar Por Orden'>
+                <br>
+                 <div class="panel panel-default panel-table">
+                      <div class="panel-heading">
+                        <div class="row">
+                            <div class="col col-xs-6">
+                                <h3 class="panel-title">Listado de Ordenes</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Buscar por # Orden..." [(ngModel)]="searchStrOrd" name="searchStrOrd" (keyup)="searchNumOrd()"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="panel-body">
+                        <table class="table table-striped table-bordered table-list">
+                        <thead>
+                            <tr>
+                                <th>#Orden</th>
+                                <th>Cliente</th>
+                                <th>Precio</th>
+                                <th>Orden Creada</th>
+                                <th>Status Orden</th>
+                                <th><em class="fa fa-cog"></em></th>
+                            </tr> 
+                        </thead>
+                        <tbody *ngIf="searchResOrd">
+                        <tr class="active">
+                                <td class="hidden-xs">{{searchResOrd.order_id}}</td>
+                                <td>John Doe</td>
+                                <td>{{searchResOrd.order_price}}</td>
+                                <td>{{searchResOrd.order_date}}</td>
+                                <td>{{searchResOrd.order_status.status_name}}</td>
+                                <td align="center">
+                                    <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                    <a class="btn btn-danger"><em class="fa fa-trash-o"></em></a>
+                                </td>
+                         </tr>
+                        </tbody>
+                        </table>
+                     </div>
+
+
+                 </div>
+
+            </tab>
+           
+        </tabset>
         </div>
         
-  </div>
+    </div>
 </div>
+
+

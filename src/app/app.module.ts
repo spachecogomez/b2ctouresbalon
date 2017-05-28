@@ -6,6 +6,7 @@ import { routes } from './app.router';
 
 import { AlertModule } from 'ng2-bootstrap';
 //import { DropdownModule } from 'ng2-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap';
 import { CarouselModule } from 'ng2-bootstrap/carousel';
 import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
 
@@ -42,6 +43,7 @@ import { SearchComponent } from './components/search/search.component';
     HttpModule,
     routes,
     AlertModule.forRoot(),
+    TabsModule.forRoot(),
     CarouselModule.forRoot(),
     TypeaheadModule.forRoot()
   ],

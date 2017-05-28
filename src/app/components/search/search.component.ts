@@ -17,9 +17,9 @@ export class SearchComponent implements OnInit {
   searchRes: IProduct[];
 
   searchProduct(){
-    console.log(this.searchStr);
-    this.productService.searchProducts(this.searchStr).subscribe(res => 
+       this.productService.searchProducts(this.searchStr).subscribe(res => 
             {this.searchRes = res});
+    
   }
 
   ngOnInit() {
