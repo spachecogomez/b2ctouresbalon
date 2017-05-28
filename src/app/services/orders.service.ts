@@ -58,7 +58,7 @@ export class OrdersService {
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders/'+id;
     return this.http.get(searchUrl)
-           .map(res => res.json())
+            .map((response: Response) => response.json())
 
   }
   private handleError(error: Response) {
