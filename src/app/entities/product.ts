@@ -1,18 +1,23 @@
 export interface IProduct {
-    id:number;
-    productName:string;
-    imageUrl:string;
-    starRating: number;
-    info:string;
-    price:number;
-    quantity :number;
+    ciudad:string;
+    espectaculo:IEspectacle;
+    fechaEspectaculo:date;
+    fechaLlegada:string;
+    fechaSalida:string;
+    prodID:number;
 }
 
-/*export class Product {
-    id:number;
-    productName:string;
-    imageUrl:string;
-    starRating: number;
-    info:string;
-    price:number;
-}*/
+export interface IEspectacle{
+    estado:number;
+    fechaCreacion:string;
+    fechaModificacion:string;
+    idEspectaculo:number;
+    nombre:string;
+    precio:number;
+}
+
+
+export interface IGenericResult{
+    size:number;
+    results:IProduct[]
+}

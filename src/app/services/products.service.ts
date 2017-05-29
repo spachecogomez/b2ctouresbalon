@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { environment } from '../../environments/environment';
 import { AppComponent } from '../app.component';
 import { CounterService } from './counter.service';
+import { IGenericResult } from '../entities/product'
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
@@ -28,33 +29,26 @@ export class ProductsService {
 
    }
 
-   searchProducts(str:string){
+   searchProducts(str:string,start:number){
      var url = environment.url;
      var port = environment.port;
-     var searchUrl = 'http://'+url+':'+port+'/products?productName='+str;
+     var searchUrl = 'http://'+url+':'+port+'/products/byespectaclename?nombre='+str+'&start='+start+'&pageSize=10';
      return this.http.get(searchUrl)
             .map(res => res.json())
      
    }
 
-  getProducts(): Observable<IProduct[]> {
+  getProducts(start:number) {
       var url = environment.url;
       var port = environment.port;
-      return this.http.get('http://'+url+':'+port+'/products')
-                      .map((response: Response) => <IProduct[]> response.json())
-                      .catch(this.handleError);
-      /*return this.http.get('http://'+url+':'+port+'/products')
-                      .map((response: Response) => <IProduct[]> response.json())
-                      .do(data => console.log('All: ' +  JSON.stringify(data)))
-                      .catch(this.handleError);*/
-            
-
+      var searchUrl = 'http://'+url+':'+port+'/products/byespectaclename?start='+start+'&pageSize=10';
+      return this.http.get(searchUrl)
+            .map(res => res.json()).do(res => console.log('**'+res.size))
   }
 
   addProduct(product) : void {
      this.selectedItems.push(product);
      this.setSessionStorage(product);
-     //console.log(this.selectedItems);
 
   }
 
