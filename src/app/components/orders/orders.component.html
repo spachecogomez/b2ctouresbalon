@@ -4,7 +4,7 @@
             <ul class="nav nav-pills nav-stacked admin-menu">
                 <li><a [routerLink]="['/admin/']"data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
                 <li class="active" ><a [routerLink]="['/admin/orders']" data-target-id="widgets"><i class="fa fa-list-alt fa-fw"></i>Ordenes</a></li>
-                <li><a href="http://www.jquery2dotnet.com" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
+                <li><a [routerLink]="['/admin/customers']" data-target-id="customers"><i class="fa fa-file-o fa-fw"></i>Clientes</a></li>
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="charts"><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a></li>
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="table"><i class="fa fa-table fa-fw"></i>Table</a></li>
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="forms"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
@@ -14,6 +14,9 @@
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
             </ul>
         </div>
+        <!--<div *ngIf="orders">
+          {{orders.size}}
+        </div>-->
         <div class="col-md-10 ">
         <tabset>
             <tab heading='Lista Ordenes'>
@@ -38,10 +41,10 @@
                                 <th><em class="fa fa-cog"></em></th>
                             </tr> 
                         </thead>
-                        <tbody>
-                            <tr class="active" *ngFor="let o of orders">
+                        <tbody *ngIf="orders">
+                            <tr class="active" *ngFor="let o of orders.details">
                                 <td class="hidden-xs">{{o.order_id}}</td>
-                                <td>John Doe</td>
+                                <td>{{o.customer_details.cust_firstname}} {{o.customer_details.cust_lastname}}</td>
                                 <td>{{o.order_price}}</td>
                                 <td>{{o.order_date}}</td>
                                 <td>{{o.order_status.status_name}}</td>
@@ -86,6 +89,7 @@
                         <div class="row">
                             <div class="col col-xs-6">
                                 <h3 class="panel-title">Listado de Ordenes</h3>
+                                <br>
                                 <form>
                                     <div class="form-group">
                                         <input class="form-control" type="text" placeholder="Buscar por # Orden..." [(ngModel)]="searchStrOrd" name="searchStrOrd" (keyup)="searchNumOrd()"/>

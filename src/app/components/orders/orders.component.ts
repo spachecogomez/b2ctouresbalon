@@ -12,10 +12,10 @@ import { IOrders } from '../../entities/orders';
 export class OrdersComponent implements OnInit {
 
   //orders = [];
-  orders: IOrders[];
+  orders: IOrders;
   errorMessage: String;
   searchStrOrd: String;
-  searchResOrd: IOrders[];
+  searchResOrd: IOrders;
   errorMsg: string;
 
   constructor(private _orders : OrdersService) { }

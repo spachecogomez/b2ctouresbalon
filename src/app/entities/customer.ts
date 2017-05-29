@@ -11,3 +11,17 @@ export class Customer {
     public cust_credit_card_number: string;
     public cust_status: number;
 }
+
+export interface ICustomer{
+    customerId:number;
+    firstName:string;
+    lastName:string;
+    phoneNumber:string;
+    email:string;
+    password:string;
+    creditCardType:string;
+    creditCardNumber:string;
+    status:string;
+
+
+}

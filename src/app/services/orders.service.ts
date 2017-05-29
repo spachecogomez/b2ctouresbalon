@@ -15,12 +15,13 @@ export class OrdersService {
   constructor(private http: Http) { }
 
   getOrders(){
-     //var url = '192.168.0.2';
-    var url = 'localhost';
+     var url = '192.168.0.2';
+    //var url = 'localhost';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders?start=0&pageSize=10';
     return this.http.get(searchUrl)
             .map(res => res.json())
+            .do(value => console.log(value));
      //var url = environment.url;
      //var port = environment.port;
      /*return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
@@ -53,12 +54,14 @@ export class OrdersService {
 
   }*/
 
-  getOrderbyId(id:String){
-    var url = 'localhost';
+  getOrderbyId(id:String) {
+    var url = '192.168.0.2';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders/'+id;
     return this.http.get(searchUrl)
-            .map((response: Response) => response.json())
+                .map((response: Response) => response.json())
+   
+  
 
   }
   private handleError(error: Response) {

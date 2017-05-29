@@ -10,6 +10,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SearchComponent } from './components/search/search.component';
+import { CustomersComponent } from './components/customers/customers.component';
 
 export const router : Routes =[
     { path:'', component: HomeComponent },
@@ -19,7 +20,8 @@ export const router : Routes =[
     { path:'login', component: LoginComponent },
     { path:'register', component: RegisterComponent },
     { path:'admin', component: AdminComponent },
-    { path:'admin/orders', component: OrdersComponent }                 
+    { path:'admin/orders', component: OrdersComponent },
+    { path:'admin/customers', component: CustomersComponent }                 
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(router);
