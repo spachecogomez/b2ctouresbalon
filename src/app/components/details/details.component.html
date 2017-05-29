@@ -9,13 +9,13 @@
   </div>
 </div>-->
 
-<div class="thumbnail">
-  <img class="img-responsive" src="{{campaign.image_detail}}" alt="">
+<div class="thumbnail" *ngIf="campaign">
+  <img class="img-responsive" src="http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg" alt="">
   <div class="caption-full">
-      <h4 class="pull-right"><b> ${{campaign.total_price}}</b></h4>
+      <h4 class="pull-right"><b> ${{campaign.espectaculo.precio + campaign.estadia.precio + campaign.transporte.precio | currency:'COP':false}}</b></h4>
       <div *ngFor='let s of (campaign | ObjNgFor)'>
         <h4 *ngIf="s.value.spectacle_name">
-         {{s.value.spectacle_name}}
+         {{s.value.espectaculo.nombre}}
         </h4>
         <div *ngIf="s.value.spectacle_date">
          <b> Fecha del Espectaculo:</b>
@@ -23,7 +23,7 @@
         </div>
         <div *ngIf="s.value.spectacle_date">
           <b>Ciudad del evento:</b>
-          {{s.value.spectacle_city}}
+          {{s.value.espectaculo.nombre}}
         </div>
         <div *ngIf="s.value.arrival_date">
          <b> Fecha de llegada:</b>
