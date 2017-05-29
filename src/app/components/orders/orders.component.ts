@@ -17,13 +17,16 @@ export class OrdersComponent implements OnInit {
   searchStrOrd: String;
   searchResOrd: IOrders;
   errorMsg: string;
+  totalItem :number;
+  p: number = 1;
 
   constructor(private _orders : OrdersService) { }
 
   ngOnInit() {
     /*this._orders.getOrders().subscribe(
       (data) => this.orders = data);*/
-      this.getOrders();
+      //this.getOrders();
+      this.getServerData(1);
   }
   getOrders():void {
      this._orders.getOrders()
@@ -40,5 +43,33 @@ export class OrdersComponent implements OnInit {
 
     alert("Empeza un proceso modelado en el BPEL Cancelar Orden #"+event.target.id);
   }
+
+
+public getServerData(event){
+ 
+		this._orders.getOrdersbyPage(event).subscribe(
+			response =>{
+				if(response.error) { 
+					alert('Server Error');
+				} else {
+          //console.log(response.details);
+					this.orders = response.details;
+					this.totalItem = response.size;
+				}
+			},
+			error =>{
+				alert('Server error');
+			}
+		);
+		return event;
+	}
+ /* getOrdersbyPage(page){
+
+    this._orders.getOrdersbyPage(page)
+          .subscribe(orders => this.orders = orders,
+          error => this.errorMessage = <any>error);
+
+
+  }*/
 
 }

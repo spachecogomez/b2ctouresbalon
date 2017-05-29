@@ -28,6 +28,15 @@ export class OrdersService {
       .map((response: Response) => response.json())
       .do(value => console.log(value));*/
   }
+   getOrdersbyPage(page:number){
+     var url = '192.168.0.2';
+    //var url = 'localhost';
+    var port = '8080';
+    var searchUrl = 'http://'+url+':'+port+'/orders?start='+page+'&pageSize=10';
+    return this.http.get(searchUrl)
+            .map(res => res.json())
+            .do(value => console.log(value));
+  }
 
    /*getOrders(): Observable<IOrders[]> {
       //var url = '192.168.0.2';
