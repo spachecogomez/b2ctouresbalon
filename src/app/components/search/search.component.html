@@ -3,20 +3,43 @@
 <hr>
 <form>
   <div class="form-group">
-      <input class="form-control" type="text" placeholder="Buscar por nombre de evento..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchProduct()"/>
+      <input class="form-control" type="text" placeholder="Buscar por nombre de evento..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchProduct(0)"/>
   </div>
 </form>
 
+<div *ngIf="searchRes">
+  <h6>Mostrando 10 de {{ searchRes.size }} resultados</h6>
+</div>
   
 <div *ngIf="searchRes">
-  <div *ngFor="let res of searchRes">
+  <div *ngFor="let res of searchRes.results">
     <div class="row">
         <div class="col-md-12">
             <div class="search-res well">
-              <h4>{{res.productName}} - $ {{res.price}}</h4>
+              <h4>{{res.espectaculo.nombre}} - $ {{res.espectaculo.precio}}</h4>
             </div>
         </div>
     </div>
-     
+  </div>
+</div>
+
+<div *ngIf="searchRes">
+  <div *ngIf="searchRes.size / 10 > 1 ">
+  <div class="panel-footer">
+      <div class="row">
+        <div class="col col-xs-4">Page 1 of 5
+        </div>
+        <div class="col col-xs-8">
+          <ul class="pagination hidden-xs pull-right">
+            
+          </ul>
+          <ul class="pagination visible-xs pull-right">
+            <li><a href="#">«</a></li>
+            <li><a href="#">»</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h6>Mostrat {{ searchRes.size / 10 }} paginas</h6> 
   </div>
 </div>

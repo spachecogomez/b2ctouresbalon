@@ -28,10 +28,10 @@ export class ProductsService {
 
    }
 
-   searchProducts(str:string){
+   searchProducts(str:string,start:number){
      var url = environment.url;
      var port = environment.port;
-     var searchUrl = 'http://'+url+':'+port+'/products?productName='+str;
+     var searchUrl = 'http://'+url+':'+port+'/products/byespectaclename?nombre='+str+'&start='+start+'&pageSize=10';
      return this.http.get(searchUrl)
             .map(res => res.json())
      
