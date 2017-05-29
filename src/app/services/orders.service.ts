@@ -22,11 +22,6 @@ export class OrdersService {
     return this.http.get(searchUrl)
             .map(res => res.json())
             .do(value => console.log(value));
-     //var url = environment.url;
-     //var port = environment.port;
-     /*return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
-      .map((response: Response) => response.json())
-      .do(value => console.log(value));*/
   }
    getOrdersbyPage(page:number){
      var url = '192.168.0.2';
@@ -38,30 +33,6 @@ export class OrdersService {
             .do(value => console.log(value));
   }
 
-   /*getOrders(): Observable<IOrders[]> {
-      //var url = '192.168.0.2';
-      var url = 'localhost';
-      var port = '8080';
-      return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
-                      .map((response: Response) => <IOrders[]> response.json())
-                      .do(data => console.log('All: ' +  JSON.stringify(data)))
-                      .catch(this.handleError);
-      return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
-                       .map((response: Response) => <IOrders[]> response.json())
-                       .catch(this.handleError);
-            
-
-  }*/
-
-  /*getOrderbyId(id:String):Observable<IOrders[]>{
-     var url = 'localhost';
-      var port = '8080';
-      return this.http.get('http://'+url+':'+port+'/orders/'+id)
-                       .map((response: Response) => <IOrders[]> response.json())
-                       .do(data => console.log('All: ' +  JSON.stringify(data)))
-                       .catch(this.handleError);
-
-  }*/
 
   getOrderbyId(id:String) {
     var url = '192.168.0.2';

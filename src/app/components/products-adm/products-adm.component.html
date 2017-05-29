@@ -3,9 +3,9 @@
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked admin-menu">
                 <li><a [routerLink]="['/admin/']"data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
-                <li class="active" ><a [routerLink]="['/admin/orders']" data-target-id="widgets"><i class="fa fa-list-alt fa-fw"></i>Ordenes</a></li>
-                <li><a [routerLink]="['/admin/customers']" data-target-id="customers"><i class="fa fa-file-o fa-fw"></i>Clientes</a></li>
-                <li><a [routerLink]="['/admin/products']" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i>Productos</a></li>
+                <li><a [routerLink]="['/admin/orders']" data-target-id="orders"><i class="fa fa-list-alt fa-fw"></i>Ordenes</a></li>
+                <li ><a [routerLink]="['/admin/customers']" data-target-id="customers"><i class="fa fa-file-o fa-fw"></i>Clientes</a></li>
+                <li class="active"><a [routerLink]="['/admin/products']" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i>Productos</a></li>
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="table"><i class="fa fa-table fa-fw"></i>Table</a></li>
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="forms"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="calender"><i class="fa fa-calendar fa-fw"></i>Calender</a></li>
@@ -14,19 +14,16 @@
                 <li><a href="http://www.jquery2dotnet.com" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
             </ul>
         </div>
-        <!--<div *ngIf="orders">
-          {{orders.size}}
-        </div>-->
         <div class="col-md-10 ">
-        <tabset>
-            <tab heading='Lista Ordenes'>
+          <tabset>
+            <tab heading='Lista Clientes'>
                 <br>
                     <div class="pagination-data">
                         <div class="panel panel-default panel-table">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col col-xs-6">
-                                    <h3 class="panel-title">Listado de Ordenes</h3>
+                                    <h3 class="panel-title">Listado de Clientes</h3>
                                 </div>
                             </div>
                         </div>
@@ -42,24 +39,24 @@
                                     <th><em class="fa fa-cog"></em></th>
                                 </tr> 
                             </thead>
-                            <tbody *ngIf="orders">
-                                <tr *ngFor = ' let o of orders  | paginate : { itemsPerPage:10, currentPage:page, id : 1, totalItems:totalItem } ' >
-                                     <td class="hidden-xs">{{o.order_id}}</td>
+                            <tbody *ngIf="products">
+                                <tr *ngFor = ' let p of products  | paginate : { itemsPerPage:10, currentPage:page, id : 1, totalItems:totalItem } ' >
+                                     <!--<td class="hidden-xs">{{o.order_id}}</td>
                                      <td>{{o.customer_details.cust_firstname}} {{o.customer_details.cust_lastname}}</td>
-                                    <td>{{o.order_price}}</td>
-                                    <td>{{o.order_date}}</td>
-                                    <td>{{o.order_status.status_name}}</td>
-                                    <td align="center">
-                                        <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                        <a class="btn btn-danger"><em class="fa fa-trash-o"></em></a>
-                                    </td>
+                                      <td>{{o.order_price}}</td>
+                                      <td>{{o.order_date}}</td>
+                                      <td>{{o.order_status.status_name}}</td>
+                                      <td align="center">
+                                          <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                          <a class="btn btn-danger"><em class="fa fa-trash-o"></em></a>
+                                      </td>-->
                                 </tr>
                             </tbody>
                             </table>
                         </div>
                         <div class="panel-footer">
                             <pagination-controls 
-                                (pageChange) = "page = getOrders($event)" 
+                                (pageChange) = "page = getProducts($event)" 
                                 id="1"
                                 maxSize = "7"
                                 directionLinks = "true"
@@ -127,6 +124,7 @@
             </tab>
            
         </tabset>
+        
         </div>
         
     </div>

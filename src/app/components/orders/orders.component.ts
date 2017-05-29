@@ -23,16 +23,8 @@ export class OrdersComponent implements OnInit {
   constructor(private _orders : OrdersService) { }
 
   ngOnInit() {
-    /*this._orders.getOrders().subscribe(
-      (data) => this.orders = data);*/
-      //this.getOrders();
-      this.getServerData(1);
-  }
-  getOrders():void {
-     this._orders.getOrders()
-          .subscribe(orders => this.orders = orders,
-          error => this.errorMessage = <any>error);
-
+      //Primer paginado
+      this.getOrders(1);
   }
    searchNumOrd(){
     this._orders.getOrderbyId(this.searchStrOrd).subscribe(res => this.searchResOrd = res,
@@ -45,7 +37,7 @@ export class OrdersComponent implements OnInit {
   }
 
 
-public getServerData(event){
+public getOrders(event){
  
 		this._orders.getOrdersbyPage(event).subscribe(
 			response =>{
@@ -63,13 +55,5 @@ public getServerData(event){
 		);
 		return event;
 	}
- /* getOrdersbyPage(page){
-
-    this._orders.getOrdersbyPage(page)
-          .subscribe(orders => this.orders = orders,
-          error => this.errorMessage = <any>error);
-
-
-  }*/
 
 }

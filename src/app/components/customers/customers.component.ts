@@ -15,13 +15,14 @@ export class CustomersComponent implements OnInit {
   errorMsg: string;
   searchStrCust: String;
   searchResCust: ICustomer[];
+  p: number = 1;
 
   constructor(private _customer : CustomersService) { }
 
   ngOnInit() {
     this.getCustomers();
   }
-
+  
   getCustomers():void {
      this._customer.getCustomers()
           .subscribe(orders => this.customers = orders,

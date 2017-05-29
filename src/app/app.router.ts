@@ -11,6 +11,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SearchComponent } from './components/search/search.component';
 import { CustomersComponent } from './components/customers/customers.component';
+import { ProductsAdmComponent } from './components/products-adm/products-adm.component';
 
 export const router : Routes =[
     { path:'', component: HomeComponent },
@@ -21,7 +22,8 @@ export const router : Routes =[
     { path:'register', component: RegisterComponent },
     { path:'admin', component: AdminComponent },
     { path:'admin/orders', component: OrdersComponent },
-    { path:'admin/customers', component: CustomersComponent }                 
+    { path:'admin/customers', component: CustomersComponent },
+    { path:'admin/products', component: ProductsAdmComponent }                      
 ];
 
 export const routes : ModuleWithProviders = RouterModule.forRoot(router);

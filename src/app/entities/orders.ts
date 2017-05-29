@@ -1,13 +1,6 @@
 import { Order_status } from '../entities/order_status';
 import { ICustomer,Customer } from '../entities/customer';
 
-/*export interface IOrders {
-    order_id: string;
-    order_date: Date;
-    order_price :number;
-    order_status : Order_status;
-
-}*/
 export interface IOrders {
     size: number;
     details : OrdersList[];
