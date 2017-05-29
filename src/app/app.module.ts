@@ -9,6 +9,7 @@ import { AlertModule } from 'ng2-bootstrap';
 import { TabsModule } from 'ngx-bootstrap';
 import { CarouselModule } from 'ng2-bootstrap/carousel';
 import { TypeaheadModule } from 'ng2-bootstrap/typeahead';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { SearchComponent } from './components/search/search.component';
 import { CustomersComponent } from './components/customers/customers.component';
+import { ProductsAdmComponent } from './components/products-adm/products-adm.component';
 
 @NgModule({
   declarations: [
@@ -37,10 +39,12 @@ import { CustomersComponent } from './components/customers/customers.component';
     ProductsComponent,
     CartComponent,
     SearchComponent,
-    CustomersComponent
+    CustomersComponent,
+    ProductsAdmComponent
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     FormsModule,
     HttpModule,
     routes,
