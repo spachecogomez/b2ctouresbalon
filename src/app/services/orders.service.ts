@@ -15,50 +15,33 @@ export class OrdersService {
   constructor(private http: Http) { }
 
   getOrders(){
-     //var url = '192.168.0.2';
-    var url = 'localhost';
+     var url = '192.168.0.2';
+    //var url = 'localhost';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders?start=0&pageSize=10';
     return this.http.get(searchUrl)
             .map(res => res.json())
-     //var url = environment.url;
-     //var port = environment.port;
-     /*return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
-      .map((response: Response) => response.json())
-      .do(value => console.log(value));*/
+            .do(value => console.log(value));
+  }
+   getOrdersbyPage(page:number){
+     var url = '192.168.0.2';
+    //var url = 'localhost';
+    var port = '8080';
+    var searchUrl = 'http://'+url+':'+port+'/orders?start='+page+'&pageSize=10';
+    return this.http.get(searchUrl)
+            .map(res => res.json())
+            .do(value => console.log(value));
   }
 
-   /*getOrders(): Observable<IOrders[]> {
-      //var url = '192.168.0.2';
-      var url = 'localhost';
-      var port = '8080';
-      return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
-                      .map((response: Response) => <IOrders[]> response.json())
-                      .do(data => console.log('All: ' +  JSON.stringify(data)))
-                      .catch(this.handleError);
-      return this.http.get('http://'+url+':'+port+'/orders?start=0&pageSize=10')
-                       .map((response: Response) => <IOrders[]> response.json())
-                       .catch(this.handleError);
-            
 
-  }*/
-
-  /*getOrderbyId(id:String):Observable<IOrders[]>{
-     var url = 'localhost';
-      var port = '8080';
-      return this.http.get('http://'+url+':'+port+'/orders/'+id)
-                       .map((response: Response) => <IOrders[]> response.json())
-                       .do(data => console.log('All: ' +  JSON.stringify(data)))
-                       .catch(this.handleError);
-
-  }*/
-
-  getOrderbyId(id:String){
-    var url = 'localhost';
+  getOrderbyId(id:String) {
+    var url = '192.168.0.2';
     var port = '8080';
     var searchUrl = 'http://'+url+':'+port+'/orders/'+id;
     return this.http.get(searchUrl)
-            .map((response: Response) => response.json())
+                .map((response: Response) => response.json())
+   
+  
 
   }
   private handleError(error: Response) {
