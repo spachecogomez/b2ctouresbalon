@@ -27,7 +27,7 @@ export class ProductsAdmComponent implements OnInit {
 				if(response.error) { 
 					alert('Server Error');
 				} else {
-					this.products = response.details;
+					this.products = response.results;
 					this.totalItem = response.size;
 				}
 			},
