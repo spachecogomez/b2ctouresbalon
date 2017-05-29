@@ -18,7 +18,6 @@ export class SearchComponent implements OnInit {
   searchRes: IGenericResult;
 
   searchProduct(start:number){
-       console.log("searching by name : "+ this.searchStr + "with size param "+start);
        this.productService.searchProducts(this.searchStr,start).subscribe(res => 
             {this.searchRes = res});
     
