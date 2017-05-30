@@ -24,4 +24,15 @@ export class ProductsAdmService {
             .do(value => console.log(value));
   }
 
+   getProductbyId(id:String) {
+     var url = '192.168.0.25';
+    var port = '8090';
+    var searchUrl = 'http://'+url+':'+port+'/products?productCode='+id;
+    return this.http.get(searchUrl)
+                .map((response: Response) => response.json())
+   
+  
+
+  }
+
 }

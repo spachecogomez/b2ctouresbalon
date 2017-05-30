@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsAdmService } from '../../services/products-adm.service';
-import { IProduct } from '../../entities/product';
+import { IGenericResult,ListProduct } from '../../entities/product';
 
 @Component({
   selector: 'app-products-adm',
@@ -10,23 +10,28 @@ import { IProduct } from '../../entities/product';
 })
 export class ProductsAdmComponent implements OnInit {
 
-  products: IProduct;
+  products: IGenericResult;
+  searchStrProd: String;
+  searchResProd: ListProduct;
   errorMsg: string;
   totalItem :number;
   p: number = 1;
 
-  constructor(private productsService : ProductsAdmService) { }
+  constructor(private productAdmService : ProductsAdmService) { }
 
   ngOnInit() {
+    this.getProducts(1);
+
   }
 
   getProducts(event){
  
-		this.productsService.getProductsbyPage(event).subscribe(
+		this.productAdmService.getProductsbyPage(event).subscribe(
 			response =>{
 				if(response.error) { 
 					alert('Server Error');
 				} else {
+          console.log(response.results);
 					this.products = response.results;
 					this.totalItem = response.size;
 				}
@@ -37,5 +42,10 @@ export class ProductsAdmComponent implements OnInit {
 		);
 		return event;
 	}
+  searchNumProd(){
+    this.productAdmService.getProductbyId(this.searchStrProd).subscribe(res => this.searchResProd = res,
+    err =>this.errorMsg = <any>err);
+
+  }
 
 }
