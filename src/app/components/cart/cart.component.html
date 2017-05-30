@@ -25,10 +25,10 @@
 
     <tbody>
       <tr *ngFor="let product of cartProducts; let i = index">
-        <td><h4>{{product.quantity}}</h4></td>
-        <td><h4>{{product.productName}}</h4></td>
-        <td><h4>${{product.price}}</h4></td>
-        <td><img src={{product.imageUrl}} width="100" height="100" /></td>
+        <td><h4>1</h4></td>
+        <td><h4>{{product.espectaculo.nombre}}</h4></td>
+        <td><h4>${{product.espectaculo.precio + product.estadia.precio + product.transporte.precio | currency:'COP':false}}</h4></td>
+        <td><img src="http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg" width="100" height="100" /></td>
         <td><button (click)="removeProduct(i)" data-id="{{i}}" class="btn btn-xs btn-danger">Remove Product</button></td>
       </tr>
 

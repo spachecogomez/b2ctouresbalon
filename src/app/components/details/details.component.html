@@ -12,33 +12,28 @@
 <div class="thumbnail" *ngIf="campaign">
   <img class="img-responsive" src="http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg" alt="">
   <div class="caption-full">
-      <h4 class="pull-right"><b> ${{campaign.espectaculo.precio + campaign.estadia.precio + campaign.transporte.precio | currency:'COP':false}}</b></h4>
-      <div *ngFor='let s of (campaign | ObjNgFor)'>
-        <h4 *ngIf="s.value.spectacle_name">
-         {{s.value.espectaculo.nombre}}
-        </h4>
-        <div *ngIf="s.value.spectacle_date">
-         <b> Fecha del Espectaculo:</b>
-          {{s.value.spectacle_date}}
-        </div>
-        <div *ngIf="s.value.spectacle_date">
-          <b>Ciudad del evento:</b>
-          {{s.value.espectaculo.nombre}}
-        </div>
-        <div *ngIf="s.value.arrival_date">
-         <b> Fecha de llegada:</b>
-          {{s.value.arrival_date}}
-        </div>
-        <div *ngIf="s.value.return_date">
-         <b> Fecha de regreso:</b>
-          {{s.value.return_date}}
-        </div>
-        <div *ngIf="s.value.return_date">
-         <b> Fecha de regreso:</b>
-          {{s.value.return_date}}
+      <div class="pull-left">
+        <h4 ><b> Precio Total</b></h4>
+        <div class="pull-left">
+          <h4 ><b> Precio Espectaculo</b></h4>
+          <h4 ><b> Precio Estadia</b></h4>
+          <h4 ><b> Precio Transporte</b></h4>
         </div>
       </div>
-      <br>
+      <div class="pull-right">
+        <h4 ><b> ${{campaign.espectaculo.precio + campaign.estadia.precio + campaign.transporte.precio | currency:'COP':false}}</b></h4>
+        <div class="pull-right">
+          <h4 ><b> ${{campaign.espectaculo.precio |  currency:'COP':false}}</b></h4>
+          <h4 ><b> ${{campaign.estadia.precio |  currency:'COP':false}}</b></h4>
+          <h4 ><b> ${{campaign.transporte.precio |  currency:'COP':false}}</b></h4>
+        </div>
+      </div> 
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
   </div>
   <div class="ratings">
       <div class="pull-right">
