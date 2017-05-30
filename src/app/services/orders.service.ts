@@ -41,6 +41,7 @@ export class OrdersService {
     var searchUrl = 'http://'+url+':'+port+'/orders/'+id;
     return this.http.get(searchUrl)
                 .map((response: Response) => response.json())
+                .do(value => console.log(value));
    
   
 

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li><a [routerLink]="['/admin/']"data-target-id="home"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                <li class="active" ><a [routerLink]="['/admin/orders']" data-target-id="widgets"><i class="fa fa-list-alt fa-fw"></i>Ordenes</a></li>
+                <li><a [routerLink]="['/admin/customers']" data-target-id="customers"><i class="fa fa-file-o fa-fw"></i>Clientes</a></li>
+                <li><a [routerLink]="['/admin/products']" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i>Productos</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="table"><i class="fa fa-table fa-fw"></i>Table</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="forms"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="calender"><i class="fa fa-calendar fa-fw"></i>Calender</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="library"><i class="fa fa-book fa-fw"></i>Library</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="applications"><i class="fa fa-pencil fa-fw"></i>Applications</a></li>
+                <li><a href="http://www.jquery2dotnet.com" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10 ">
+        <div *ngIf="order">
+          {{order.order_id}}
+        </div>
+        
+        </div>
+        
+    </div>
+</div>
+
+
