@@ -43,7 +43,7 @@ export class ProductsService {
       var port = environment.port;
       var searchUrl = 'http://'+url+':'+port+'/products/byespectaclename?start='+start+'&pageSize=10';
       return this.http.get(searchUrl)
-            .map(res => res.json()).do(res => console.log('**'+res.size))
+            .map(res => res.json())
   }
 
   addProduct(product) : void {

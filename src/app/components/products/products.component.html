@@ -1,25 +1,32 @@
-<div class="body">
+<div class="body" (scroll)="onScroll($event)">
   <div class="row" *ngIf="products">
-    	<div class="col-xs-6 col-sm-6 col-md-3" *ngFor="let product of products.results">
-        <!--<h3>{{product.espectaculo.nombre}}</h3>-->
+    	<div class="col-xs-6 col-sm-6 col-md-3" *ngFor="let product of products.results" >
          <div class="col-item">
+            <!--div>{{product.prodID}}</div-->
                 <div class="photo">
                     <img src="http://news.lalate.com/wp-content/uploads/2017/01/fa-cup-results-2017-results-scores-today-schedule-3.jpg" class="img-responsive" alt="a" />
                 </div>
                 <div class="info">
                     <div class="row">
-                        <div class="price col-md-10">
+                        <div class="price col-md-10" *ngIf="product.espectaculo" >
                             <h5 class="price-text-color">${{product.espectaculo.precio | currency:'COP':false}}</h5>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="price col-md-8">
+                        <div class="price col-md-8" *ngIf="product.espectaculo" >
                             {{product.espectaculo.nombre}}
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="pull-right col-md-8 date-text-color" *ngIf="product" >
+                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span> {{product.fechaEspectaculo | date}}
+                            
                         </div>
                     </div>
                     <div class="row">
                         <div class="rating hidden-sm col-md-8">
-                            <i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
+                            <i class="price-text-color fa fa-star" *ngIf="producto"></i><i class="price-text-color fa fa-star">
                             </i><i class="price-text-color fa fa-star"></i><i class="price-text-color fa fa-star">
                             </i><i class="fa fa-star"></i>
                         </div>
