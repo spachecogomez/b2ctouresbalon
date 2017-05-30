@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../environments/environment';
+import { IOrderRequest,IOrderStatus,ICustomerDetails,IOrderDetail } from '../entities/order_request'
 
 @Injectable()
 export class OrdersService {
@@ -44,6 +45,14 @@ export class OrdersService {
   
 
   }
+
+  createOrders(orders:Array<IOrderRequest>){
+    //var host = environment.url;
+    //var port = environment.port;
+    var serviceLocation = 'http://localhost:8080/orders/'
+    return this.http.post(serviceLocation , orders , {}).map((response: Response) => response.json()).subscribe();
+  }
+
   private handleError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
