@@ -25,6 +25,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { SearchComponent } from './components/search/search.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ProductsAdmComponent } from './components/products-adm/products-adm.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ProductsAdmComponent } from './components/products-adm/products-adm.com
     CartComponent,
     SearchComponent,
     CustomersComponent,
-    ProductsAdmComponent
+    ProductsAdmComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

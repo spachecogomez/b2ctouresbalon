@@ -12,12 +12,14 @@ import { CartComponent } from './components/cart/cart.component';
 import { SearchComponent } from './components/search/search.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ProductsAdmComponent } from './components/products-adm/products-adm.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 export const router : Routes =[
     { path:'', component: HomeComponent },
     { path:'cart', component: CartComponent },
     { path:'search', component : SearchComponent},     
     { path:'details/:id', component: DetailsComponent },
+    { path:'admin/order_details/:id', component: OrderDetailsComponent },
     { path:'login', component: LoginComponent },
     { path:'register', component: RegisterComponent },
     { path:'admin', component: AdminComponent },
