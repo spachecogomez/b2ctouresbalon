@@ -12,8 +12,8 @@ import { ProductsService } from '../../services/products.service';
 })
 export class CartComponent implements OnInit {
      cartProducts= new Array;
-     public totalPrice: number;
-     public totalQuantity: number;
+     totalPrice: number;
+     totalQuantity: number;
 
   constructor(private _productsService : ProductsService) { }
 

@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  url : 'localhost',
-  port:'3000'
+  url : '192.168.0.25',
+  port:'8090'
 };

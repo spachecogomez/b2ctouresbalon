@@ -26,9 +26,9 @@ export class ProductsComponent implements OnInit {
             {this.products = res});
 
   }
-  addToCart(product){
-    console.log("Agregar a Carrito : "+product.productName);
-    product.quantity = 1;
+  addToCart(product:IProduct){
+    console.log("Agregar a Carrito : "+product.espectaculo.nombre);
+    //product.quantity = 1;
     this.productsService.addProduct(product);
   }
 
